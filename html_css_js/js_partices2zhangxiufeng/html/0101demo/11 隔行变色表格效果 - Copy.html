@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript">
+	
+	// document.write('后盾网');
+	// document.write('后');
+	// document.write('盾');
+	// document.write('网');
+
+	var rows = prompt('亲，请输入行数哦！');
+	var cols = prompt('亲，请输入列数哦！');
+	var bg = prompt('请输入背景颜色');
+
+	document.write('<table border="1">');
+
+	for(var i=1;i<=rows;i++){
+		if(i%2==1){
+			document.write('<tr style="background:'+bg+';color:white;">');
+		}else{
+			document.write('<tr>');
+		}
+
+		for(var j=1;j<=cols;j++){
+			document.write('<td>'+i+'行'+j+'列</td>');
+		}
+		
+		document.write('</tr>');
+	}
+	
+	document.write('</table>');
+
+
+</script>
+</head>
+
+<body>
+
+<!-- table>tr*10>td{后盾网}*5 -->
+<!-- <table border="1">
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+	<tr>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+		<td>后盾网</td>
+	</tr>
+</table>
+ -->
+
+
+</body>
+</html>

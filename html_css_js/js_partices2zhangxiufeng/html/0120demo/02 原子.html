@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	// 注意：只要是字符串中有任何一部分是符合正则要求的，那么就是能匹配成功的！
+
+	// 创建正则规则
+	var reg = /\w\d/;
+	var str = '后 盾网47期12实训班';
+	// 用正则去匹配字符串
+	var re = reg.test(str);
+	if(re){
+		document.write('匹配成功！O(∩_∩)O');
+	}else{
+		document.write('匹配失败！%>_<%');
+	}
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+		*{
+		padding: 0px;
+		margin: 0px;
+		/*background: red;*/
+	}
+	#main{
+		width:600px;
+		height: 600px;
+		/*border: 3px solid purple;*/
+		margin: 0 auto;
+	}
+	#main #box{
+		width: 600px;
+		height: 300px;
+		border: 2px solid blue;
+		margin: 10px 0;
+		overflow:auto;
+	}
+	#main #box .msg{
+		font-size: 15px;
+		line-height: 2em;
+		font-family: 微软雅黑;
+		text-indent: 20px;
+	}
+	#liuyan{
+		width: 600px;
+		border: 2px solid orange;
+		height: 50px;
+
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var box=document.getElementById('box');
+		var liuyan=document.getElementById('liuyan');
+		var bto=document.getElementById('btn');
+		bto.onclick=function(){
+			var conta=liuyan.value;
+			if(conta==''){
+				alert('请不要提交空内容！');
+				return;
+			}
+			var new_p=document.createElement('p');
+			new_p.innerHTML=conta;
+			new_p.setAttribute('class','msg');
+			box.appendChild(new_p);
+			liuyan.value='';
+		}
+		
+	}
+</script>
+</head>
+
+<body>
+<div id="main">
+		<div id="box">
+			<p class="msg">美女你好，可以请你吃个饭吗?</p>
+			<p class="msg">gun</p>
+			<p class="msg">好吧，W天冷了要记得多穿衣服</p>
+			<p class="msg">对不起，您对话的用户已经下s线了</p>
+		</div>
+		<textarea name="" id="liuyan" cols="30" rows="10"></textarea>
+		<input type="button" value="提交留言" id="btn" />
+	</div>
+</body>
+</html>

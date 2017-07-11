@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-19-div变化</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	img{
+		width: 150px;
+		height: 150px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var bto=document.getElementById('bto');
+		var pic=document.getElementById('pic');
+		var s=5;
+		bto.onclick=function(){
+			var timer=setInterval(function(){
+				var old_left=parseInt(pic.style.width);
+				var new_left=old_left+s;
+				pic.style.width=new_left+'px';
+				var new_height=old_left+s;
+				pic.style.height=new_left+'px';
+				if (new_left==300) {
+					s=s*-1;
+				};
+				if (new_left==150){
+					s=s*-1;
+				};
+			},10);
+		}	
+	}
+</script>
+</head>
+
+<body>
+<input type="button" value="点击变化" id="bto" />
+<br /><br />
+<img style="width:150px;height:150px;" src="./images/1.jpg" id="pic" alt="" />
+</body>
+</html>

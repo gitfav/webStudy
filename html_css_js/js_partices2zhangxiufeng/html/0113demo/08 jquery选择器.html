@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBpC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<!-- 引入jquery -->
+<!-- script[src=jquery-1.7.2.min.js] -->
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		// css的选择器都能用于jquery选元素
+		// $('#box').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box中儿子辈的p标签
+		// $('#box>p').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是紧邻在#one后面的p标签
+		// $('#one+p').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#One后面所有的p标签
+		// $('#one~p').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box里面的第一个p标签
+		// $('#box p:first').css({'color':'blue','font-size':'20px'});
+
+		// 选择#box里面的所有p标签，除了#One
+		// $('#box p:not(#one)').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box中序号是偶数的p标签
+		// $('#box p:even').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box中序号是3的p标签
+		// $('#box p:eq(3)').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box中序号大于2的p标签
+		// $('#box p:gt(2)').css({'color':'blue','font-size':'20px'});
+
+		// 选择#box中内容包含“盾5”的p标签
+		// $('#box p:contains(盾5)').css({'color':'blue','font-size':'20px'});
+
+		// 选择的是#box中包含span标签的p标签
+		$('#box p:has(span)').css({'color':'blue','font-size':'20px'});
+
+
+
+	})
+
+
+
+</script>
+</head>
+
+<body>
+
+<div id="box">
+	<p>后盾网 人人做后盾0</p>
+	<p id="one">后盾网 人人做后盾1</p>
+	<p>后盾网 人人做后盾2</p>
+	<p>后盾网 人人做后盾3 <span>我是span标签</span></p>
+	<p>后盾网 人人做后盾4</p>
+	<p>后盾网 人人做后盾5 <span>我是span标签</span></p>
+	<p>后盾网 人人做后盾6</p>
+	<p>后盾网 人人做后盾7</p>
+	<div>
+		<p>我们也是p标签</p>
+		<p>我们也是p标签</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#ad{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+</style>
+<script type="text/javascript">
+
+window.onload = function(){
+	var ad = document.getElementById('ad');
+	// 获得可视区域宽高
+	var window_width = document.documentElement.clientWidth;
+	var window_height = document.documentElement.clientHeight;
+	// 计算最大left和最大top
+	var max_left = window_width-300;
+	var max_top = window_height-300;
+	var x=1,y=1;
+
+
+	// 控制跑动的定时器
+	setInterval(function(){
+		// 获得元素的旧left top值
+		if(document.all){
+			var old_left = parseInt(ad.currentStyle.left);
+			var old_top = parseInt(ad.currentStyle.top);
+		}else{
+			var old_left = parseInt(getComputedStyle(ad,null).left);
+			var old_top = parseInt(getComputedStyle(ad,null).top);
+		}
+		// 计算新值
+		var new_left = old_left+x;
+		var new_top = old_top+y;
+		// 赋值回去
+		ad.style.left = new_left+'px';
+		ad.style.top = new_top+'px';
+		// 判断边界条件
+		// if(new_top==max_top){
+		// 	y = -1;
+		// }
+		// if(new_top==0){
+		// 	y = 1;
+		// }
+		// if(new_left==max_left){
+		// 	x = -1;
+		// }
+		// if(new_left==0){
+		// 	x = 1;
+		// }
+
+		if(new_top==max_top || new_top==0){
+			y = -1*y;
+		}
+		if(new_left==max_left || new_left==0){
+			x = -1*x;
+		}
+		
+	},2)
+}
+
+
+</script>
+</head>
+
+<body>
+
+<img src="ad.jpg" alt="" id="ad" />
+
+
+
+</body>
+</html>

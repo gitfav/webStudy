@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	var tidai=function(){
+		var di=document.getElementById("id1");
+		var oldp=document.getElementById("para1");
+		var newh=document.createElement("h1");			//新建“h1”元素，但未添加到DOM里。
+		var newt=document.createTextNode("Welcome"); 	//新建文本，用于加到“h1”中
+		di.replaceChild(newh,oldp);						//用新建的“h1”元素代替原来的“p”元素。
+		newh.appendChild(newt);							//给新建的“h1”添加文本。
+	}
+
+	var reM=function(){
+		var di=document.getElementById("id1");
+		var oldp=document.getElementById("para2");
+		var reIt=di.removeChild(oldp);      			//删除“p”，并将它返回reIt中。
+		alert("Item with id "+reIt.getAttribute("id")+" has been remove.");
+	}
+
+	window.onload=function(){
+		document.getElementById("but").onclick=tidai;
+		document.getElementById('but2').onclick=reM;
+	}
+	
+</script>
+</head>
+
+<body>
+<div id="id1">
+	<p id="para1">Welcome to my web.</p>
+	<p id="para2">Please take a look around.</p>
+	<input id="but" value="Replace Element" type="button"/>
+	<input id="but2" value="Remove Element" type="button" />
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#beijing{
+		width: 600px;
+		height: 500px;
+		background: blue;
+		font-size: 30px;
+		color: white;
+		font-weight: 700;
+	}
+	#chaoyang{
+		width: 400px;
+		height: 300px;
+		background: orange;
+	}
+	#xiaoying{
+		width: 260px;
+		height: 260px;
+		background: green;
+	}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById('beijing').onclick = function(){
+		alert('北京');
+	}
+
+	document.getElementById('chaoyang').onclick = function(e){
+		alert('朝阳');
+		// 获得事件对象
+		var ev = window.event || e;
+		// 阻止事件流
+		if(document.all){//document.all可以判断浏览器是否是IE,是的话为IE
+			ev.cancelBubble=true;
+		}else{
+			ev.stopPropagation();
+		}
+		
+	}
+
+	document.getElementById('xiaoying').onclick = function(){
+		alert('小营');
+	}
+}
+</script>
+</head>
+
+<body>
+
+ <div id="beijing">
+ 	北京 
+ 	<div id="chaoyang">
+ 	朝阳区
+ 		<div id="xiaoying">小营路</div>
+ 	</div>
+ </div>
+
+
+
+</body>
+</html>

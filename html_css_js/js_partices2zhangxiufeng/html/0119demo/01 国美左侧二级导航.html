@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#gm{
+		width: 195px;
+		height: 420px;
+		border: 1px solid blue;
+		margin: 20px;
+		position: relative;
+	}
+	#gm li{
+		height: 28px;
+		width: 195px;
+		list-style: none;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+	}
+	#gm li .title{
+		color: #333;
+		font-size: 14px;
+		line-height: 28px;
+		text-indent: 13px;
+		position: relative;
+	}
+	#gm li .title span{
+		display: block;
+		width: 7px;
+		height: 10px;
+		background: url(bg.png) no-repeat -483px -141px;
+		position: absolute;
+		right: 5px;
+		top: 9px;
+	}
+	#gm li .hide_box{
+		width: 500px;
+		height: 450px;
+		border: 1px solid #666;
+		background: white;
+		position: absolute;
+		left: 194px;
+		top: 0px;
+		display: none;
+	}
+	#gm li.cur{
+		border-top: 1px solid #666;
+		border-bottom: 1px solid #666;
+	}
+	#gm li.cur .title{
+		background: white;
+		z-index: 5;
+	}
+	#gm li.cur .title span{
+		background: url(bg.png) no-repeat -469px -141px;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	// 给li加事件
+	$('#gm li').hover(function() {
+		// 给移入的li加class为cur
+		$(this).addClass('cur');
+		// 让里面的hide_box显示
+		$(this).find('.hide_box').show();
+	}, function() {
+		// 给移出的li删除class
+		$(this).removeClass('cur');
+		// 让里面的hide_box隐藏
+		$(this).find('.hide_box').hide();
+	});
+
+})
+
+
+
+</script>
+</head>
+
+<body>
+
+
+<ul id="gm">
+
+	<li>
+		<p class="title">电视 影音<span></span></p>
+		<div class="hide_box">电视 影音</div>
+	</li>
+	<li>
+		<p class="title">冰箱 洗衣机 空调<span></span></p>
+		<div class="hide_box">冰箱 洗衣机 空调</div>
+	</li>
+	<li>
+		<p class="title">厨卫 生活电器净化器<span></span></p>
+		<div class="hide_box">厨卫 生活电器净化器</div>
+	</li>
+	<li>
+		<p class="title">电视 影音<span></span></p>
+		<div class="hide_box">电视 影音</div>
+	</li>
+	<li>
+		<p class="title">冰箱 洗衣机 空调<span></span></p>
+		<div class="hide_box">冰箱 洗衣机 空调</div>
+	</li>
+	<li>
+		<p class="title">厨卫 生活电器净化器<span></span></p>
+		<div class="hide_box">厨卫 生活电器净化器</div>
+	</li>
+	<li>
+		<p class="title">电视 影音<span></span></p>
+		<div class="hide_box">电视 影音</div>
+	</li>
+	<li>
+		<p class="title">冰箱 洗衣机 空调<span></span></p>
+		<div class="hide_box">冰箱 洗衣机 空调</div>
+	</li>
+	<li>
+		<p class="title">厨卫 生活电器净化器<span></span></p>
+		<div class="hide_box">厨卫 生活电器净化器</div>
+	</li>
+</ul>
+
+
+</body>
+</html>

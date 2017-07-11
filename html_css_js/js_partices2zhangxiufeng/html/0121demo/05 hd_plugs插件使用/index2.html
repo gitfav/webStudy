@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		position: absolute;
+		left: 300px;
+		top: 100px;
+		width: 400px;
+		height: 400px;
+		background: purple;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="hd_plugs_v141205.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 居中
+	// $('#box').hd_center();
+	// $('#box').hd_drag(true);
+
+	$('#box').mouseover(function(e) {
+
+		var re = hd_direction($(this),e);
+		// alert(re);
+		if(re=='right'){
+			$('#box').animate({'left':'10px'}, 400);
+		}else if(re=='left'){
+			$('#box').animate({'left':'600px'}, 400);
+		}else if(re=='top'){
+			$('#box').animate({'top':'200px'}, 400);
+		}else if(re=='bottom'){
+			$('#box').animate({'top':'10px'}, 400);
+		}
+	});
+
+
+})
+	
+
+
+</script>
+</head>
+
+<body>
+
+
+<div id="box"></div>
+
+
+
+</body>
+</html>

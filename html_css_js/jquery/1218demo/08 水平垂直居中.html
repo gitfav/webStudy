@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#news{
+		width: 400px;
+		border: 4px solid blue;
+		padding: 30px;
+		margin: 0 auto;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+	
+	function juzhong(){
+		// 获得可视区域高度
+		var window_height = $(window).height();
+		// 获得元素本身的高度
+		var news_height = $('#news').outerHeight();
+		// 计算margin-top值
+		var mtop = (window_height - news_height)/2;
+		// 给box赋值
+		$('#news').css('margin-top', mtop+'px');
+	}
+	
+
+	juzhong();
+
+	// 给浏览器加resize事件
+	$(window).resize(function() {
+		juzhong();
+	});
+
+})
+
+</script>
+</head>
+
+<body>
+
+
+<div id="news">根据小米去年0.56亿美元的净利润和42亿美元的营收，其年利润率才有1.8%，远低于苹果及三星的28.7%及18.7%不说，还大大低于银行的利率。如果这是这样，投资者还不如把钱存银行，风险更低还有更高的收益。不过，小内很快就发现，这里头的事情没那么简单，我们都想错了。
+
+在小米不久前进行海外融资期间，《华尔街日报》曾公布过一些财务数据：小米去年的营收的确为42亿美元不假，但其净利润是5.6亿美元。这与最近的数据有十倍的差距，是《华尔街日报》看错了小数点位置吗？如果是这样，小米仅凭1.8%的利润率就能拿到15亿美元融资</div>
+
+
+</body>
+</html>

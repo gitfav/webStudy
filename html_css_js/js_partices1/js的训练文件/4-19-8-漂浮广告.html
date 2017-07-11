@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-19-漂浮广告</title>
+<script type="text/javascript">
+	window.onload=function(){
+		var pic=document.getElementById('pic');
+		var x=1;
+		var y=1;
+		var timer;
+		var w=document.documentElement.clientWidth;
+		var h=document.documentElement.clientHeight;
+		var old_width=pic.offsetWidth;
+		var old_height=pic.offsetHeight;
+		var max_w=w-old_width;
+		var max_h=h-old_height;
+		// alert(old_width)
+		function hanshu(){
+			var oldl=pic.offsetLeft;
+			var oldt=pic.offsetTop;
+			var new_l=oldl+x;
+			var new_t=oldt+y;
+			if(new_l==max_w||new_l==0){
+				x=x*-1;
+			};
+			if(new_t==max_h||new_t==0){
+				y=y*-1;
+			}
+			pic.style.left=new_l+'px';
+			pic.style.top=new_t+'px';
+		}
+		timer=setInterval(hanshu,1);
+		pic.onmouseover=function(){
+			clearInterval(timer);
+		}
+		pic.onmouseout=function(){
+			timer=setInterval(hanshu,1);
+		}
+		pic.onclick=function(){
+			pic.style.display='none';
+		}
+	}
+</script>
+</head>
+
+<body>
+	<img style="position:absolute;left:0px;top:0px;width:187px;height:341px;" id="pic" src="./images/6.jpg" alt="" />
+</body>
+</html>

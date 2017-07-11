@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	// window.onload=function(){
+		function a(){
+			try{	
+				var tx=document.getElementById("tx");
+				var x=document.getElementById("tw").value;
+				if (x=="")		throw"empty";
+				if (x<5)			throw"too low";
+				if (x>10) 		throw"too high";
+				if (isNaN(x))		throw"not a number";
+				tx.innerHTML=x;
+			}
+			catch(err){
+				var tx=document.getElementById("tx");
+				tx.innerHTML=err;
+			}
+		}
+	// }
+</script>
+</head>
+
+<body>
+<p>一个javascript</p>
+<p>请输入5-10之间的数</p>
+<input type="text" / id="tw"><input type="button"  onclick="a()" id="bu"  value="确定" />
+<p id="tx"></p>
+</body>
+</html>

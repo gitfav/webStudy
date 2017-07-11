@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	.main{
+		width: 500px;
+		height: 60px;
+		margin: 0 auto;
+	}
+	.main .bu{
+		width: 200px;
+		height: 50px;
+	}
+	img{
+		display: block;
+		max-width: 500px;
+		max-height: 400px;
+		margin: auto;
+	}
+	body{
+		background: #DEDEDE;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+	window.onload=function(){
+		var bu1=document.getElementById('bu1');
+		var bu2=document.getElementById('bu2');
+		var img=document.getElementById('img');
+		var a=['falali.jpg','gaoyuanyuan.jpg','iphone6.png','pinguo6.jpg','qian.jpg','wuyanzu.jpg','xiexiehuigu.jpg'];
+		var timer;
+		bu1.onclick=function(){
+			clearInterval(timer);//防止再点击开始时使重叠函数运行
+			timer=setInterval(function(){
+				var r=Math.floor(Math.random()*7);
+				var a_name='./images/'+a[r];
+				img.setAttribute('src',a_name);
+			},50);
+		}
+		bu2.onclick=function(){
+			clearInterval(timer);
+		}
+	}
+
+</script>
+</head>
+
+<body>
+
+<div class="main">
+	<input type="button" value="开始" class="bu" id="bu1" />
+	<input type="button" value='停止' class="bu" id="bu2" />
+</div>
+<img src="./images/falali.jpg" alt="" id="img" />
+
+</body>
+</html>

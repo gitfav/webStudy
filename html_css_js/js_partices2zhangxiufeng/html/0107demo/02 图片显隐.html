@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+window.onload = function(){
+	var btn = document.getElementById('btn');
+	var dog = document.getElementById('dog');
+	var sta = 1;
+	// 给按钮加事件
+	btn.onclick = function(){
+		if(sta==1){
+			dog.style.display = 'none';
+			sta = 2;
+		}else{
+			dog.style.display = 'block';
+			sta = 1;
+		}
+	}
+}
+
+	// (条件)?成立时返回的值:不成立时候返回的值;
+
+	// var re = (4>5)?'对的':'不对';
+	// alert(re);
+
+</script>
+</head>
+
+<body>
+
+	<input type="button" value="点我啊！" id="btn" />
+
+	<br /><br />
+
+	<img src="dog.jpg" alt="" id="dog" />
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 600px;
+		height: 500px;
+		border: 4px solid blue;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	
+	// 给按钮加单击事件
+	$('#btn').click(function() {
+		// 向#box里追加新的h2
+		$('#box').append('<h2 class="houdun">我是新来的h2标签</h2>');
+	});
+
+	// 不管元素是新来的还是原来的，统统加事件
+	$('#box h2').live('click',function() {
+		alert('你好啊！涛儿不要说话！否则打你哦！');
+	});
+})
+	
+
+</script>
+</head>
+
+<body>
+
+<input type="button" value="点我~" id="btn" />
+<br />
+<div id="box">
+	<h2>后盾网 人人做后盾0</h2>
+	<h2>后盾网 人人做后盾1</h2>
+	<h2>后盾网 人人做后盾2</h2>
+</div>
+
+</body>
+</html>

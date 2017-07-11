@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 900px;
+		border: 4px solid blue;
+		/*解决子元素撑不开父级的问题*/
+		overflow: hidden;
+	}
+	#box .shop{
+		width: 280px;
+		height: 130px;
+		background: purple;
+		margin: 5px;
+		float: left;
+	}
+	#bottom{
+		width: 900px;
+		height: 500px;
+		background: green;
+	}
+</style>
+</head>
+
+<body>
+
+
+<!-- 有浮动属性的子元素撑不开父级元素 -->
+<!-- 解决方案：给父级元素加overflow:hidden; 属性 -->
+
+<div id="box">
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+	<div class="shop"></div>
+</div>
+<div id="bottom"></div>
+
+
+
+</body>
+</html>

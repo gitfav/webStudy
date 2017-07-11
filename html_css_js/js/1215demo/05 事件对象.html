@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#dog{
+		margin: 100px;
+		position: relative;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var dog = document.getElementById('dog');
+
+		// 给小狗加单击事件
+		dog.onclick = function(e){
+			// alert('你好');
+			// if(document.all){
+			// 	var ev = window.event;
+			// }else{
+			// 	var ev = e;
+			// }
+
+			// 短路兼容性写法
+			var ev = window.event || e;
+			// alert(ev.clientX);
+
+			// 获得鼠标距离事件源左侧的距离
+			var l = ev.offsetX || ev.layerX;
+			alert(l);
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<img src="dog.jpg" alt="" id="dog" />
+
+
+
+
+
+</body>
+</html>

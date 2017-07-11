@@ -1,0 +1,116 @@
+EXISTS key			整数，如下的整数结果
+						1 如果key存在
+						0 如果key不存在
+					返回key是否存在。
+
+EXPIRE key seconds	整数，如下的整数结果
+						1 如果设置了过期时间
+						0 如果没有设置过期时间，或者不能设置过期时间
+					设置key的过期时间。如果key已过期，将会被自动删除。设置了过期时间的key被称之为volatile。在key过期之前可以重新更新他的过期时间，也可以使用PERSIST命令删除key的过期时间。
+
+EXPIREAT key timestamp 整数，如下的整数结果
+						1 如果设置了过期时间
+						0 如果没有设置过期时间，或者不能设置过期时间
+						EXPIREAT 的作用和 EXPIRE类似，都用于为 key 设置生存时间。不同在于 EXPIREAT 命令接受的时间参数是 UNIX 时间戳 Unix timestamp 。
+
+TTL KEYS 			当 key 不存在时，返回 -2 。
+					当 key 存在但没有设置剩余生存时间时，返回 -1 。
+					否则，以秒为单位，返回 key 的剩余生存时间。
+					以秒为单位，返回给定 key 的剩余生存时间(TTL, time to live)。
+
+KEYS pattern		符合给定模式 pattern 的 key 列表。
+					查找所有符合给定模式 pattern 的 key 。
+					KEYS * 匹配数据库中所有 key 。
+					KEYS h?llo 匹配 hello ， hallo 和 hxllo 等。
+					KEYS h*llo 匹配 hllo 和 heeeeello 等。
+					KEYS h[ae]llo 匹配 hello 和 hallo ，但不匹配 hillo 。
+					特殊符号用 \ 隔开。
+
+RANDOMKEY 			Bulk reply:如果数据库没有任何key，返回nil，否则返回一个随机的key。
+					从当前数据库返回一个随机的key。
+
+RENAME key newkey	将key重命名为newkey，如果key与newkey相同，将返回一个错误。如果newkey已经存在，则值将被覆盖。
+
+TYPE KEYS 			返回 key 所储存的值的类型。
+					none (key不存在)
+					string (字符串)
+					list (列表)
+					set (集合)
+					zset (有序集)
+					hash (哈希表)
+
+
+
+
+APPEND key value	整数回复（Integer reply）：返回append后字符串值（value）的长度。
+					如果 key 已经存在，那么这个命令会把 value 追加到原来值（value）的结尾。如果 key 不存在，那么它将首先创建一个空字符串的key，再执行追加操作，这种情况 APPEND 将类似于 SET 操作。
+
+SET key value		状态码：总是OK，因为SET不会失败。
+					将key和value对应。如果key已经存在了，它会被覆盖，而不管它是什么类型。
+
+GET key				Bulk reply:key对应的value，或者nil（key不存在时）
+					返回key的value。如果key不存在，返回特殊值nil。如果key的value不是string，就返回错误，因为GET只处理string类型的values。
+
+INCR key			整型数字：增加之后的value
+					对key对应的数字做加1操作。如果key不存在，那么在操作之前，这个key对应的值会被置为0。如果key有一个错误类型的value或者是一个不能表示成数字的字符串，就返回错误。这个操作最大支持在64位有符号的整型数字。
+
+INCRBY key increment 数字：增加之后的value值。
+					将key对应的数字加decrement。如果key不存在，操作之前，key就会被置为0。如果key的value类型错误或者是个不能表示成数字的字符串，就返回错误。这个操作最多支持64位有符号的正型数字。
+
+DECR key			数字：减小之后的value
+					对key对应的数字做减1操作。如果key不存在，那么在操作之前，这个key对应的值会被置为0。如果key有一个错误类型的value或者是一个不能表示成数字的字符串，就返回错误。这个操作最大支持在64位有符号的整型数字。
+
+DECRBY key decrement 返回一个数字：减少之后的value值。
+					将key对应的数字减decrement。如果key不存在，操作之前，key就会被置为0。如果key的value类型错误或者是个不能表示成数字的字符串，就返回错误。这个操作最多支持64位有符号的正型数字。
+
+
+
+MGET key [key ...]	多返回值: 指定的key对应的values的list
+					返回所有指定的key的value。对于每个不对应string或者不存在的key，都返回特殊值nil。正因为此，这个操作从来不会失败。
+
+MSET key value [key value ...] 状态码：总是OK，因为MSET不会失败。
+					对应给定的keys到他们相应的values上。MSET会用新的value替换已经存在的value，就像普通的SET命令一样。如果你不想覆盖已经存在的values，请参看命令MSETNX。
+
+
+
+
+Redis 列表(List)
+
+LPUSH key value [value ...] 整型回复: 在 push 操作后的 list 长度。
+					将所有指定的值插入到存于 key 的列表的头部。如果 key 不存在，那么在进行 push 操作前会创建一个空列表。 如果 key 对应的值不是一个 list 的话，那么会返回一个错误。
+
+RPUSH key value [value ...] 整型回复: 在 push 操作后的 list 长度。
+					向存于 key 的列表的尾部插入所有指定的值。如果 key 不存在，那么会创建一个空的列表然后再进行 push 操作。 当 key 保存的不是一个列表，那么会返回一个错误。
+
+LLEN key 			整数: key对应的list的长度。
+					返回存储在 key 里的list的长度。 如果 key 不存在，那么就被看作是空list，并且返回长度为 0。 当存储在 key 里的值不是一个list的话，会返回error。
+
+BLPOP key [key ...] timeout 移出并获取列表的第一个元素，如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止.
+
+BRPOP key [key ...] timeout 移出并获取列表的最后一个元素，如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止.
+
+BRPOPLPUSH source destination timeout 批量回复: 元素从 source 中弹出来，并压入 destination 中。 如果达到 timeout 时限，会返回一个 空的多批量回复。
+
+RPOPLPUSH source destination 批量回复: 被移除和放入的元素
+					原子性地返回并移除存储在 source 的列表的最后一个元素（列表尾部元素）， 并把该元素放入存储在 destination 的列表的第一个元素位置（列表头部）。
+
+LPOP key 			批量回复: 返回第一个元素的值，或者当 key 不存在时返回 nil。
+					移除并且返回 key 对应的 list 的第一个元素。
+
+RPOP key 			批量回复: 最后一个元素的值，或者当 key 不存在的时候返回 nil。
+					移除并返回存于 key 的 list 的最后一个元素。
+
+LREM key count value 整型回复: 被移除的元素个数。
+					从存于 key 的列表里移除前 count 次出现的值为 value 的元素。 这个 count 参数通过下面几种方式影响这个操作：
+					count > 0: 从头往尾移除值为 value 的元素。
+					count < 0: 从尾往头移除值为 value 的元素。
+					count = 0: 移除所有值为 value 的元素。
+					比如， LREM list -2 "hello" 会从存于 list 的列表里移除最后两个出现的 "hello"。
+					需要注意的是，如果list里没有存在key就会被当作空list处理，所以当 key 不存在的时候，这个命令会返回 0。
+
+LSET key index value
+					设置 index 位置的list元素的值为 value。 更多关于 index 参数的信息，详见 LINDEX。当index超出范围时会返回一个error。
+
+LINDEX key index	批量回复：请求的对应元素，或者当 index 超过范围的时候返回 nil。
+					返回列表里的元素的索引 index 存储在 key 里面。 下标是从0开始索引的，所以 0 是表示第一个元素， 1 表示第二个元素，并以此类推。 负数索引用于指定从列表尾部开始索引的元素。在这种方法下，-1 表示最后一个元素，-2 表示倒数第二个元素，并以此往前推。
+					当 key 位置的值不是一个列表的时候，会返回一个error。

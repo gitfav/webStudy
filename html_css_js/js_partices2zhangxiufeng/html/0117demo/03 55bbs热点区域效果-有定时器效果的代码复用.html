@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.news{
+		width: 500px;
+		height: 50px;
+		border: 5px solid blue;
+		margin: 20px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	.news ul{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.news ul li{
+		width: 500px;
+		height: 50px;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		color: white;
+		font-family: 微软雅黑;
+		list-style: none;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		// 循环news，给每一块加定时器
+		$('.news').each(function() {
+			// 获得当前循环到的news的原生形式对象
+			var jssss = $(this)[0];
+			var jqqqq = $(this);
+
+			jssss.c = 0;
+			jssss.run = function(){
+				jssss.c++;
+				if(jssss.c==6){
+					// 让ul top值变为0
+					jqqqq.find('ul').css('top','0');
+					jssss.c=1;
+				}
+				// 计算ul的top值
+				var t = jssss.c*-50;
+				// 让ul运动
+				jqqqq.find('ul').animate({'top':t+'px'}, 400);
+			}
+
+			jssss.timer = setInterval(jssss.run,1000);
+		});
+		
+
+
+
+		// 加鼠标移入移出效果
+		$('.news').hover(function() {
+			// 获得原生形式对象
+			var jssss = $(this)[0];
+			// 清理定时器
+			clearInterval(jssss.timer);
+		}, function() {
+			var jssss = $(this)[0];
+			// 恢复定时器
+			jssss.timer = setInterval(jssss.run,1000);
+		});
+		
+	})
+</script>
+</head>
+
+<body>
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+	<div class='news'>
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>

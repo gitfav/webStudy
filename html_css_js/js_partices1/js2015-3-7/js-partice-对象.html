@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript">
+	var t400={
+		'color':'蓝色',
+		'price':'100000',
+		'size':30,
+		'brand':'thinkpad',
+		'game':function(){
+			alert('价格贵，性能好。');
+		},
+		'chat':function(){
+			alert('能分析大数据');
+		}
+	}
+
+	var zhangsan={
+		'name':'zhangsan',
+		'sex':'男',
+		'age':'23',
+		'height':173,
+		'run':function(){
+			alert('跑步班里第一');
+		},
+		'eat':function(){
+			alert('运动好，饭量大');
+		}
+	}
+
+	document.write(t400.price+'<br>');
+	zhangsan.run();
+	t400.game();
+
+	delete zhangsan.sex;
+	document.write(zhangsan.sex);
+	for( x in zhangsan){
+		document.write(x+'=>'+zhangsan[x]+'<br>');
+	}
+	zhangsan.age=20;
+	document.write(zhangsan['age']);
+	// document.write(zhangsan.age);
+	zhangsan.drive=function(){
+		alert('会开');
+	}
+	zhangsan.drive();
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

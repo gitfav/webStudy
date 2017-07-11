@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+window.onload = function(){
+	var time = document.getElementById('time');
+	var t = 5;
+	setInterval(function(){
+		t--;
+		// 将新值写到span中
+		time.innerHTML = t;
+		if(t==0){
+			// 跳转 三种方法哪种都行
+			location.replace('http://www.12306.cn');
+			// location.assign('http://www.12306.cn');
+			// location.href = 'http://www.12306.cn';
+		}
+	},1000)
+}
+
+</script>
+</head>
+
+<body>
+
+<h1>距离买票还有<span id="time">5</span>天</h1>
+
+
+</body>
+</html>

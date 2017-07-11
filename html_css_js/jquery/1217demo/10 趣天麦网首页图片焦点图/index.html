@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	img{
+		border: 0;
+	}
+	#pics{
+		width:976px;
+		height: 296px;
+		border: 5px solid blue;
+		margin: 0 auto;
+		background: black;
+		position: relative;
+	}
+	#pics img{
+		float: left;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 给每张图片加移入事件
+		$('#pics img').mouseover(function() {
+			// 让当前移入的图片透明度变为1
+			$(this).fadeTo('slow',1);
+			// 让兄弟元素透明度变为0.7
+			$(this).siblings().fadeTo('slow',0.7);
+		});
+
+		$('#pics').mouseout(function() {
+			// 鼠标移出，让所有图片都变亮
+			$('#pics img').fadeTo('slow',1);
+		});
+	})
+</script>
+</head>
+
+<body>
+
+	<div id="pics">
+		<img src="images/1.jpg" alt="" />
+		<img src="images/2.jpg" alt="" />
+		<img src="images/3.jpg" alt="" />
+		<img src="images/4.jpg" alt="" />
+		<img src="images/5.jpg" alt="" />
+	</div>
+</body>
+</html>

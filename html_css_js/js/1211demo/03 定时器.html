@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+	function hi(){
+		alert('你好');
+	}
+
+
+	// 设立定时器
+	var timer = setInterval(hi,2000);
+	
+	// 设置定时炸弹
+	setTimeout(function(){
+		clearInterval(timer);//清理定时器
+	},5000);
+
+	// 定时器
+	// 每隔1000毫秒执行一次hi函数
+	// setInterval(hi,2000);
+
+	// 定时炸弹
+	// 4秒之后执行一次hi函数
+	// setTimeout(hi,4000);
+
+
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

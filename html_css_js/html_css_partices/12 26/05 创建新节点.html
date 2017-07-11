@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload=function(){
+		var b=document.getElementById("bu");
+		var d=document.getElementById("div1");
+		var cha=document.getElementById("cha");
+		b.onclick=function(){
+			//创建新标签
+			var ne=document.createElement("p");   //创建一个p标签
+			ne.innerHTML="this is new p.";  //加内容
+			// var pa=document.createTextNode("this is")
+			// var pb=document.createTextNode(" new p.")   //创建一个文本，用于加入其它内容中。
+			// ne.appendChild(pa);                                          
+			// ne.appendChild(pb); 				// 以上四行是另一种在p标签里加内容。
+			ne.setAttribute('class','p1');  //加属性
+			d.appendChild(ne);  //在div里插入新的p标签
+
+			//插入标签
+			// d.insertBefore(cha,d.getElementsByTagName('h1')[1]);    //在第二个后插入h2标签
+
+			//删除标签
+			// d.removeChild(d.getElementsByTagName("h1")[2]);   //移除第三个h2标签
+
+			//替换标签
+			// d.replaceChild(cha,d.getElementsByTagName("h1")[2]);
+
+			//复制节点
+			// var newH=cha.cloneNode(true);
+			// d.appendChild(newH);
+
+		}
+	}
+</script>
+</head>
+
+<body>
+<input type="button" value="增加p标签"  id="bu" />
+<h2 id="cha">要插入的标签</h2>
+<div id ="div1">
+	<h1>first h</h1>
+	<h1>twice h</h1>
+	<h1>third</h1>
+</div>
+</body>
+</html>

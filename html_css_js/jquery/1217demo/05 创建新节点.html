@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 500px;
+		height: 400px;
+		border: 5px solid blue;
+	}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	var btn = document.getElementById('btn');//抓到按钮
+	var box = document.getElementById('box');//抓到boxdiv
+	var title = document.getElementById('title');
+	// 给按钮加事件
+	btn.onclick = function(){
+		// 1、创建空标签
+		// var h = document.createElement('h2');
+		// // 2、加内容
+		// h.innerHTML = '我是新来的，别打我！';
+		// // 3、加属性
+		// h.setAttribute('class','hd');
+		// // 4、将新标签插入到box中
+		// box.appendChild(h);
+
+
+		// 在1号h2前面插入h1标签
+		// box.insertBefore(title,box.getElementsByTagName('h2')[1]);
+
+		// 删除标签
+		// box.removeChild(box.getElementsByTagName('h2')[1]);
+
+
+		// 替换标签
+		// box.replaceChild(title,box.getElementsByTagName('h2')[2]);
+
+
+		// 复制节点
+		var newH = title.cloneNode(true);
+		box.appendChild(newH);
+
+	}
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="点我~有本事点我啊！" id="btn" />
+<br />
+<h1 id="title">我是h1标签</h1>
+
+<div id="box">
+	<h2>我们是土著居民0</h2>
+	<h2>我们是土著居民1</h2>
+	<h2>我们是土著居民2</h2>
+	<!-- <h2 class="hd">我是新来的</h2> -->
+</div>
+
+
+</body>
+</html>

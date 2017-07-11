@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	document.write(history.length);//write要覆盖整个文档。
+window.onload=function(){
+	setTimeout(function(){
+		// history.back();
+		history.go(-4);
+	},3000)
+
+	var a=3;
+	setInterval(function(){
+		document.getElementById("time").innerHTML=a;
+		a--;
+	},1000)
+}
+</script>
+</head>
+
+<body>
+<div>页面经过<span id="time">3</span>秒跳转</div>
+<h1></h1>
+</body>
+</html>

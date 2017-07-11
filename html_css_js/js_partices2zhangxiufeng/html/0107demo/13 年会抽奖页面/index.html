@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#main{
+		width: 500px;
+		height: 60px;
+		margin: 0 auto;
+
+	}
+	#main input{
+		width: 200px;
+		height: 50px;
+
+	}
+	body{
+		background: #DEDEDE;
+	}
+	img{
+		display: block;
+		margin: 10px auto;
+		max-width: 500px;
+		max-height: 400px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var arr = ['gaoyuanyuan.jpg','wuyanzu.jpg','pinguo6.jpg','falali.jpg','qian.jpg','iphone6.png','xiexiehuigu.jpg'];
+		// 抓元素
+		var start = document.getElementById('start');
+		var end = document.getElementById('end');
+		var pic = document.getElementById('pic');
+			
+		// 一般来讲，一个元素同时最多只用一个定时器去控制
+		// 解决定时器叠加问题：在设置定时器之前，先清理掉定时器
+		var timer;
+		// 给开始按钮加单击事件
+		start.onclick = function(){
+			// 清理定时器
+			clearInterval(timer);
+			// 设置定时器，开始随机换图
+			timer = setInterval(function(){
+				// 抽取随机数
+				var num = Math.floor(Math.random()*(6+1-0)+0);
+				// 组合新路径
+				var new_src = "images/"+arr[num];
+				// 将新路径设置回去
+				pic.setAttribute('src',new_src);
+			},100)
+		}	
+
+		// 给结束按钮加事件
+		end.onclick = function(){
+			clearInterval(timer);
+		}
+	}
+</script>
+</head>
+
+<body>
+<div id="main">
+	<input type="button" value="开始抽奖！" id="start" />
+	<input type="button" value="结束抽奖！" id="end" />
+</div>
+
+<img src="images/xiexiehuigu.jpg" id="pic" />
+
+
+</body>
+</html>

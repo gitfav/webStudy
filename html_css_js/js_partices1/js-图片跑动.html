@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片越跑越快	</title>
+<style type="text/css">
+	#di{
+		width: 125px;
+		height: 100px;
+		position: absolute;
+		left: 0px;
+		top: 50px;
+		border: 1px solid black;
+	}
+</style>
+<script type="text/javascript">
+	
+	
+	window.onload=function(){
+		var dive=document.getElementById("di");
+		var but=document.getElementById("but");
+		var i=1;
+		var j=0;
+		function ma(){
+			var pa=parseInt(dive.style.left)+i;
+			dive.style.left=pa+'px';
+			i++;
+			if (parseInt(dive.style.left)>2000) {
+				i=1;
+				dive.style.left=0+'px';
+			};
+		}
+		var timers=setInterval(ma,50);
+		clearInterval(timers);
+		but.onclick=function() {
+			if(j==1){
+				clearInterval(timers);
+				j=0;
+			}
+			else{
+				timers=setInterval(ma,50);
+				j=1;
+			}
+			
+		}
+		
+	}
+
+</script>
+
+</head>
+
+<body>
+	<div id="di" style="left:50px;"><img src="./images/tu2.JPEG" alt="" /></div>
+	<input type="button" value="anliu" id="but" />
+</body>
+</html>

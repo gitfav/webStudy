@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+window.onload = function(){
+	function daojishi(){
+		// 创建当前时间
+		var now_time = new Date();
+		// 创建放假时间
+		var holiday = new Date(2015,1,15,17,30,0);
+		// 计算两个时间之间的时间差
+		var diff = holiday.getTime() - now_time.getTime();
+		// alert(diff);
+		// 计算剩余天数
+		var days = parseInt(diff/(24*60*60*1000));
+		// 获得计算完天数还剩余的毫秒数
+		diff = diff%(24*60*60*1000);
+		// 计算剩余的小时数
+		var hours = parseInt(diff/(60*60*1000));
+		// 获得计算完小时后还剩余的毫秒数
+		diff = diff%(60*60*1000);
+		// 计算剩余的分钟数
+		var minutes = parseInt(diff/(60*1000));
+		// 获得计算完分钟后还剩余的毫秒数
+		diff = diff%(60*1000);
+		// 计算剩余的秒数
+		var seconds = parseInt(diff/1000);
+
+		var spans = document.getElementById('time').getElementsByTagName('span');
+		spans[0].innerHTML = days;
+		spans[1].innerHTML = hours;
+		spans[2].innerHTML = minutes;
+		spans[3].innerHTML = seconds;
+	}
+
+	daojishi();
+	setInterval(function(){
+		daojishi();
+	},1000)
+	
+}
+	
+
+</script>
+</head>
+
+<body>
+
+
+<h1 id="time">距离放假还剩：<span>0</span>天<span>0</span>小时<span>0</span>分钟<span>0</span>秒</h1>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片放大放小</title>
+</head>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.img{
+		width: 445px;
+		height: 580px;
+		margin: 50px auto;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.img img{
+		position: absolute;
+		width: 445px;
+		height: 580px;
+		transition: 0.3s transform;
+		transform: translateZ(0);
+	}
+	.img img:hover{
+		 transform: scale(1.5, 1.5);
+  		transition: 0.3s transform;
+	}
+</style>
+<body>
+
+	<div class="img"><img src="./cat.jpg" alt="" /></div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<h1>后盾网相亲大会资料填写表</h1>
+
+<form method="post" action="hd.php">
+	姓名：<input type="text" name="username" value="李四" />
+	<br /><br />
+
+	密码：<input type="password" name="pwd" value="123" />
+	<br /><br />
+	
+	<!-- 默认选中单选和复选框，用checked='checked'属性 -->
+	<!-- 同一组单选按钮的name属性值要保持一致！ -->
+	性别： 男 <input type="radio" name="sex" value="1" />
+	女 <input type="radio" name="sex" value="0" checked="checked" />
+	<br /><br />
+
+	<!-- 同一组复选框的name值要一样，并且name值后面要加上中括号！ -->
+	家庭条件：有车有房 <input type="checkbox" name="family[]" value="fangche" checked="checked" />
+	老爹当官 <input type="checkbox" name="family[]" value="dangguan" />
+	良田百亩 <input type="checkbox" name="family[]" value="liangtian" checked="checked" />
+	欠债百万 <input type="checkbox" name="family[]" value="qianzhai" />
+	<br /><br />
+	
+	<!-- 默认选中option用selected='selected'属性 -->
+	学历：<select name="edu" size="5">
+		<option value="xiaoxue">小学</option>
+		<option value="chuzhong">初中</option>
+		<option value="gaozhong">高中</option>
+		<option value="daxue" selected="selected">大学</option>
+		<option value="shuoshi">硕士</option>
+		<option value="boshi">博士</option>
+		<option value="shengdoushi">圣斗士</option>
+		<option value="lieshi">烈士</option>
+	</select>
+	<br /><br />
+
+	靓照：<input type="file" />
+	<br /><br />
+
+
+	个人简介： <textarea name="description">这家伙很懒，啥也没留！</textarea>
+	<br /><br />
+
+	<input type="submit" value="我写好了！快帮我找对象！" />
+	<input type="reset" value="写错了！我要重新！" />
+</form>
+
+
+
+
+</body>
+</html>

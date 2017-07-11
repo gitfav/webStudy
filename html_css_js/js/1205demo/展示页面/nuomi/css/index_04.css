@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+body{font-size:14px;color:#2b2b2b;font-family:Arial,Tahoma,songti,Verdana,STHeiTi,sans-serif;background:#FAFAFA;}
+a{color:#73abc9;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a.f69{color:#f69;}
+
+
+#topAd{width:100%;height:80px;background:#E2D59E;}
+.topAd{width:980px;height:80px;margin:0 auto;}
+
+#topBar{width:100%;height:28px;border-top:1px solid #ccc;border-bottom:1px solid #DFDFDF;background:#fff;}
+#topBar .topBar{width:980px;margin:0 auto;line-height:28px;font-size:12px;}
+#topBar .topBar .city{width:380px;float:left;}
+#topBar .topBar .city span{font-weight:700;padding-right:8px;}
+#topBar .topBar .memberInfo{width:600px;float:right;text-align:right;color:#C7C7C8;}
+#topBar .topBar .memberInfo a{padding:0 8px;}
+#topBar .topBar .memberInfo a.my:hover{color:#FF658E;}
+
+#head{width:100%;height:100px;background:#fff;}
+#head .head{width:980px;height:100px;margin:0 auto;}
+#head .head .logo{width:300px;background:73px;float:left;margin:13px 80px 0 0;}
+#head .head .logo a{display:block;width:300px;height:73px;background:url(images/nuomi_icon_bg.png) no-repeat -82px -1579px;text-indent:-9999px;}
+#head .head .search{width:410px;height:40px;float:left;margin-top:30px;}
+#head .head .search form{width:410px;}
+#head .head .search input.text{display:block;width:310px;height:38px;border:1px solid #DFDFDF;border-right:none;float:left;line-height:30px;text-indent:10px;font-size:12px;color:#999;}
+#head .head .search input.submit{display:block;width:99px;height:40px;border:0;background:url(images/nuomi_icon_bg.png) no-repeat -283px -1655px;float:right;color:#fff;font-family:"微软雅黑";font-size:16px;text-indent:26px;}
+#head .head .search span{display:block;height:30px;line-height:30px;}
+#head .head .search span a{color:#999;font-size:12px;padding:0 5px;}
+#head .head .search input.submit:focus{background:url(images/nuomi_icon_bg.png) no-repeat -283px -1698px;}
+#head .head .promise{width:132px;height:40px;float:right;background:url(images/nuomi_icon_bg.png) no-repeat -250px -1741px;margin-top:30px;}
+
+#nav{width:100%;height:38px;background:#FF658E;border-top:1px solid #FE5985;border-bottom:1px solid #FE5985;}
+#nav .nav{width:980px;margin:0 auto;position:relative;font-family:"微软雅黑";}
+#nav .nav .allCategory{width:265px;height:47px;background:url(images/allCategory_bg.png) no-repeat;position:absolute;left:0;top:-7px;line-height:47px;text-align:center;font-size:16px;}
+#nav .nav ul{position:absolute;left:260px;top:0;}
+#nav .nav ul li{float:left;line-height:38px;font-size:16px;}
+#nav .nav ul li a{color:#fff;display:block;float:left;padding:0 25px;}
+#nav .nav ul li a:hover{background:#EE3968;text-decoration:none;}
+#nav .nav ul li.home a{background:#EE3968;}
+#nav .nav ul li.film{position:relative;}
+#nav .nav ul li.film span{display:block;width:26px;height:18px;background:url(images/nuomi_icon_bg.png) no-repeat -356px -2228px;text-indent:-9999px;position:absolute;top:-3px;;left:50px;}
+#nav .nav .mobile{float:right;width:170px;position:relative;font-size:12px;}
+#nav .nav .mobile span.app{display:block;width:90px;height:38px;position:absolute;left:0px;top:0;line-height:38px;}
+#nav .nav .mobile span.app span{display:block;width:13px;height:16px;background:url(images/nuomi_icon_bg.png) no-repeat -369px -2249px;float:left;position:absolute;left:0;top:11px;}
+#nav .nav .mobile span.app a{color:#fff;margin-left:20px;}
+#nav .nav .mobile span.app a:hover{text-decoration:none;}
+#nav .nav .mobile span.last{display:block;position:absolute;left:90px;top:-1px;}
+#nav .nav .mobile span.last a{color:#fff;display:block;width:80px;height:40px;line-height:40px;text-align:center;}
+#nav .nav .mobile span.last a:hover{text-decoration:none;background:#fff;color:#FF658E;}
+
+
+#category{width:980px;margin:0 auto;overflow:hidden;}
+#category .category{width:259px;height:486px;border:1px solid #F6F6F6;border-top:none;background:#fff;float:left;margin-right:9px;}
+#category .category dl{width:185px;height:56px;margin:0 auto;border-top:1px solid #F6F6F6;position:relative;padding-left:34px;}
+#category .category dl span{display:block;width:21px;height:21px;position:absolute;left:0px;top:6px;background:url(images/nuomi_icon_bg.png) no-repeat;}
+#category .category dl a:hover{color:#39f;text-decoration:none;}
+#category .category dl dt{height:30px;line-height:30px;}
+#category .category dl dt a{font-size:14px;font-weight:700;color:#666;}
+#category .category dl dd{float:left;margin-right:10px;}
+#category .category dl dd a{font-size:12px;color:#666;}
+#category .category dl span.icon_food{background-position:-362px -2040px;}
+#category .category dl span.icon_film{background-position:-362px -2063px;}
+#category .category dl span.icon_play{background-position:-362px -2086px;}
+#category .category dl span.icon_buy{background-position:-362px -2113px;}
+#category .category dl span.icon_life{background-position:-362px -2136px;}
+#category .category dl span.icon_hotel{background-position:-362px -2156px;}
+#category .category dl span.icon_travel{background-position:-362px -2178px;}
+#category .category dl span.icon_lady{background-position:-362px -2205px;}
+#category .area{font-size:12px;width:705px;float:right;}
+#category .area .row{height:42px;line-height:42px;border-bottom:1px solid #F3F3F3;padding:0 0 0 10px;}
+#category .area .row span{color:#999;}
+#category .area .row a{color:#666;padding:0 8px;/*for IE6*/_padding:0 7px;/*for IE6*/}
+#category .area .row a.f69{color:#f69;}
+#category .area .row a:hover{color:#73abc9;text-decoration:none;}
+#category .area .hot_item{}
+#category .area .all_area{}
+#category .area .hot_area{}
+#category .elite{height:309px;float:right;width:705px;margin-top:8px;}
+#category .elite h3{font-family:"微软雅黑";font-size:17px;position:relative;height:32px;line-height:32px;margin-bottom:8px;text-indent:20px;}
+#category .elite h3 span{display:block;width:14px;height:15px;background:url(images/nuomi_icon_bg.png) no-repeat 0 0;position:absolute;left:0;top:9px;}
+#category .elite .eliteItem{width:338px;height:307px;border:1px solid #eee;position:relative;background:#fff;}
+#category .elite .eliteItem .pic{width:340px;height:208px;position:absolute;top:-1px;left:-1px;}
+#category .elite .eliteItem h5{position:absolute;left:15px;top:223px;height:20px;line-height:20px;}
+#category .elite .eliteItem h5 a{font-size:18px;color:#2b2b2b;font-family:"微软雅黑";}
+#category .elite .eliteItem h5 a:hover{text-decoration:none;}
+#category .elite .eliteItem p{position:absolute;top:253px;}
+#category .elite .eliteItem p a{color:#999;display:block;line-height:22px;padding:0 100px 10px 15px;}
+#category .elite .eliteItem p a:hover{text-decoration:none;border-bottom:1px solid #f69;}
+#category .elite .eliteItem .price{display:block;position:absolute;left:260px;top:250px;font-family:"微软雅黑";font-size:36px;}
+#category .elite .eliteItem .price a{color:#FD8E51;}
+#category .elite .eliteItem .price a:hover{text-decoration:none;}
+#category .elite .eliteItem .price span{font-size:30px;}
+#category .elite .eliteItem span.redpacket{position:absolute;top:-4px;left:10px;display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -22px 0;}
+#category .elite .eliteItem span.discount{position:absolute;top:-4px;left:67px;display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -69px 0;}
+#category .elite .eliteItem span.discount{display:block;width:47px;height:31px;}
+#category .elite .eliteLeft{float:left;}
+#category .elite .eliteRight{float:right;}
+
+#sortby{width:100%;height:45px;border-bottom:1px solid #ccc;}
+#sortby .sortby{width:980px;line-height:45px;margin:0 auto;}
+#sortby .sortby a{display:block;float:left;font-weight:bold;color:#666;margin-right:20px;font-family:"微软雅黑";position:relative;}
+#sortby .sortby a:hover{text-decoration:none;color:#FE7E9F;}
+#sortby .sortby a span{display:block;width:7px;height:10px;background:url(images/nuomi_icon_bg.png) no-repeat;position:absolute;top:19px;right:-10px;}
+#sortby .sortby a.icon_default{color:#FE7E9F;margin-right:10px;}
+#sortby .sortby a.icon_sales span{background-position:-375px -2409px;}
+#sortby .sortby a.icon_sales:hover span{background-position:-375px -2422px;}
+#sortby .sortby a.icon_price span{background-position:-375px -2473px;}
+#sortby .sortby a.icon_price:hover span{background-position:-375px -2486px;}
+#sortby .sortby a.icon_discount span{background-position:-375px -2447px;}
+#sortby .sortby a.icon_discount:hover span{background-position:-375px -2460px;}
+#sortby .sortby a.icon_new span{background-position:-375px -2447px;}
+#sortby .sortby a.icon_new:hover span{background-position:-375px -2460px;}
+#sortby .sortby a.icon_nobooking{text-indent:20px;margin-right:10px;}
+#sortby .sortby a.icon_nobooking span{width:15px;height:15px;background-position:-367px -2525px;top:16px;left:0;}
+#sortby .sortby a.icon_nobooking:hover span{background-position:-367px -2561px;}
+#sortby .sortby a.icon_coupons{text-indent:20px;margin-right:10px;}
+#sortby .sortby a.icon_coupons span{width:15px;height:15px;background-position:-367px -2525px;top:16px;left:0;}
+#sortby .sortby a.icon_coupons:hover span{background-position:-367px -2561px;}
+#sortby .sortby a.icon_lowprice{text-indent:20px;}
+#sortby .sortby a.icon_lowprice span{width:15px;height:15px;background-position:-367px -2525px;top:16px;left:0;}
+#sortby .sortby a.icon_lowprice:hover span{background-position:-367px -2561px;}
+
+#itemIndex{width:100%;background:#f2f2f2;}
+#itemIndex .itemIndex{width:980px;margin:0 auto;overflow:hidden;}
+#itemIndex .itemIndex .items{width:740px;float:left;/*for IE6*/_overflow:hidden;/*for IE6*/}
+#itemIndex .itemIndex .items .item{width:358px;height:399px;background:#fff;float:left;margin:10px 10px 0 0;border-bottom:1px solid #D9D9D9;border-left:1px solid #EEE;border-right:1px solid #EEE;position:relative;}
+#itemIndex .itemIndex .items .item .pic{width:360px;height:220px;position:absolute;left:-1px;top:0;}
+#itemIndex .itemIndex .items .item h4{position:absolute;top:230px;left:15px;line-height:20px;}
+#itemIndex .itemIndex .items .item h4 a{color:#2B2B2B;font-size:18px;font-family:"微软雅黑";}
+#itemIndex .itemIndex .items .item h4 a:hover{text-decoration:none;}
+#itemIndex .itemIndex .items .item p{position:absolute;top:260px;left:20px;padding-right:15px;line-height:20px;}
+#itemIndex .itemIndex .items .item p a{color:#666;}
+#itemIndex .itemIndex .items .item p a:hover{color:#333;text-decoration:none;}
+#itemIndex .itemIndex .items .item .current_price{display:block;position:absolute;top:310px;left:20px;color:#FD8E51;font-family:Arial;font-size:36px;}
+#itemIndex .itemIndex .items .item .current_price span{font-size:30px;}
+#itemIndex .itemIndex .items .item .or_price{display:block;position:absolute;top:328px;left:120px;color:#666;}
+#itemIndex .itemIndex .items .item .or_price del{}
+#itemIndex .itemIndex .items .item .info{width:320px;height:29px;border-top:1px solid #EEE;position:absolute;top:369px;left:19px;}
+#itemIndex .itemIndex .items .item .info .other{color:#FE8A4B;font-size:12px;line-height:29px;float:left;}
+#itemIndex .itemIndex .items .item .info .sales{float:right;color:#666;font-size:12px;line-height:29px;}
+#itemIndex .itemIndex .items .item .banner_discount{display:block;width:170px;height:36px;background:url(images/nuomi_icon_bg.png) no-repeat -115px 0;position:absolute;left:-1px;bottom:-4px;text-indent:30px;line-height:32px;color:#fff;font-family:"微软雅黑";}
+#itemIndex .itemIndex .items .item .icon_discount{display:block;width:46px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -69px 0;position:absolute;left:10px; top:-4px;}
+#itemIndex .itemIndex .items .item .icon_redpacket{display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -22px 0;position:absolute;left:62px; top:-4px;}
+#itemIndex .itemIndex .items .item .icon_nobooking{display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -336px -1067px;position:absolute;left:10px; top:-3px;}
+#itemIndex .itemIndex .side{width:240px;float:right;margin-top:10px;}
+#itemIndex .itemIndex .side .mobileApp{margin-bottom:20px;/*for IE6 IE7*/*margin-bottom:10px;/*for IE6 IE7*/}
+#itemIndex .itemIndex .side .winterAd{}
+#itemIndex .itemIndex .side .hotList{font-family:"微软雅黑";}
+#itemIndex .itemIndex .side .hotList h6{height:48px;line-height:48px;font-size:16px;color:#333;/*for IE6 IE7*/*height:40px;*line-height:40px;/*for IE6 IE7*/}
+#itemIndex .itemIndex .side .hotList ul{}
+#itemIndex .itemIndex .side .hotList ul li{}
+#itemIndex .itemIndex .side .hotList ul li a{display:block;width:140px;height:109px;border-bottom:1px solid #F2F2F2;color:#333;padding-left:100px;}
+#itemIndex .itemIndex .side .hotList ul li.hotpot a{background:url(images/hotpot.jpg) no-repeat;}
+#itemIndex .itemIndex .side .hotList ul li.film a{background:url(images/film.jpg) no-repeat;}
+#itemIndex .itemIndex .side .hotList ul li.ktv a{background:url(images/ktv.jpg) no-repeat;}
+#itemIndex .itemIndex .side .hotList ul li.hotspring a{background:url(images/hotspring.jpg) no-repeat;}
+#itemIndex .itemIndex .side .hotList ul li.exam a{background:url(images/exam.jpg) no-repeat;border-bottom:none;}
+#itemIndex .itemIndex .side .hotList ul li a:hover{text-decoration:none;}
+#itemIndex .itemIndex .side .hotList ul li a span{display:block;}
+#itemIndex .itemIndex .side .hotList ul li a span.title{font-size:18px;line-height:40px;}
+#itemIndex .itemIndex .side .hotList ul li a span.description{line-height:30px;}
+#itemIndex .itemIndex .side .hotList ul li a span.sales{color:#999;font-size:12px;line-height:30px;}
+#itemIndex .itemIndex .side .hotList ul li a span.sales i{color:#f69;font-style:normal;}
+#itemIndex .itemIndex .side .hotRankList{font-family:"微软雅黑";}
+#itemIndex .itemIndex .side .hotRankList h6{height:48px;line-height:48px;font-size:16px;color:#333;/*for IE6 IE7*/*height:40px;*line-height:40px;/*for IE6 IE7*/}
+#itemIndex .itemIndex .side .hotRankList ul{margin-top:-10px;}
+#itemIndex .itemIndex .side .hotRankList ul li{margin-top:10px;}
+#itemIndex .itemIndex .side .hotRankList ul li a{display:block;color:#2b2b2b;background:#fff;}
+#itemIndex .itemIndex .side .hotRankList ul li a:hover{text-decoration:none;}
+#itemIndex .itemIndex .side .hotRankList ul li a span{display:block;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.pic{width:240px;height:146px;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.title{line-height:24px;padding:5px 15px;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.sales{height:30px;line-height:30px;padding:0 15px 10px;font-size:12px;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.sales i{color:#f69;font-style:normal;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.sales .price{float:left;color:#f69;}
+#itemIndex .itemIndex .side .hotRankList ul li a span.sales .day{float:right;color:#999;}
+
+#items{width:100%;border-bottom:1px solid #D8D8D8;background:#f2f2f2;}
+#items .items{width:990px;margin:0 auto;overflow:hidden;}
+#items .items .item{width:318px;height:372px;border:1px solid #eee;border-bottom:1px solid #D9D9D9;margin:10px 5px 0;background:#fff;float:left;position:relative;/*for IE6*/_margin:10px 4px 0;/*for IE6*/}
+#items .items .item .pic{width:320px;height:194px;position:absolute;top:-1px;left:-1px;}
+#items .items .item h4{position:absolute;top:210px;left:15px;line-height:30px;}
+#items .items .item h4 a{font-family:"微软雅黑";font-size:18px;color:#2b2b2b;}
+#items .items .item h4 a:hover{text-decoration:none;}
+#items .items .item p{position:absolute;top:245px;left:20px;line-height:20px;}
+#items .items .item p a{color:#666;}
+#items .items .item p a:hover{text-decoration:none;color:#333;}
+#items .items .item span{}
+#items .items .item span.currnet_price{color:#fd8e51;font-size:36px;font-family:Arial;position:absolute;top:295px;left:20px;}
+#items .items .item span.currnet_price span{font-size:30px;}
+#items .items .item span.group_price{position:absolute;top:295px;left:126px;color:#999;font-size:12px;line-height:20px;}
+#items .items .item span.group_price del{font-family:"微软雅黑";padding-left:5px;}
+#items .items .item span.or_price{position:absolute;top:315px;left:126px;color:#999;font-size:12px;line-height:20px;}
+#items .items .item span.or_price del{font-family:"微软雅黑";padding-left:5px;}
+#items .items .item .info{width:280px;height:29px;border-top:1px solid #eee;position:absolute;top:340px;left:19px;font-size:12px;}
+#items .items .item .info .other{float:left;line-height:29px;color:#F69;}
+#items .items .item .info .sales{float:right;line-height:29px;color:#999;}
+#items .items .item span.banner_discount{display:block;width:170px;height:36px;background:url(images/nuomi_icon_bg.png) no-repeat -115px 0;position:absolute;left:-1px;bottom:-4px;text-indent:30px;line-height:32px;color:#fff;font-family:"微软雅黑";}
+#items .items .item span.icon_redpacket{display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -22px 0;position:absolute;left:62px; top:-4px;}
+#items .items .item span.icon_discount{display:block;width:46px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -69px 0;position:absolute;left:10px; top:-4px;}
+#items .items .item span.icon_nobooking{display:block;width:47px;height:31px;background:url(images/nuomi_icon_bg.png) no-repeat -336px -1067px;position:absolute;left:10px; top:-3px;}
+#items .pagesAll{width:980px;margin:20px auto 0;color:#888;text-indent:15px;}
+#items .pagesAll span{padding:0 3px;}
+#items .pagesAll span.all{color:#F69;}
+#items .pagesIndex{width:980px;height:28px;margin:20px auto;text-align:center;font-family:Arial;}
+#items .pagesIndex a{display:inline-block;line-height:28px;padding:0 8px;color:#999;background:#fff;margin-right:5px;}
+#items .pagesIndex a:hover{text-decoration:none;line-height:26px;padding:0 7px;border:1px solid #F69;color:#F69;}
+#items .pagesIndex a.current{line-height:26px;padding:0 7px;color:#666;border:1px solid #666;}
+#items .pagesIndex a.next{height:28px;}
+#items .pagesIndex a.next span.arrowRight{display:inline-block;border-top:5px solid #fff;border-right:5px solid #fff;border-bottom:5px solid #fff;border-left:5px solid #666;margin:8px -3px 0 3px;}
+#items .pagesIndex a.next:hover span.arrowRight{border-top:5px solid #fff;border-right:5px solid #fff;border-bottom:5px solid #fff;border-left:5px solid #f69;}
+
+#linksIndex{width:100%;background:#fff;}
+#linksIndex .linksIndex{width:980px;margin:20px auto 0;overflow:hidden;font-family:"微软雅黑";}
+#linksIndex .linksIndex .links{width:700px;height:195px;float:left;}
+#linksIndex .linksIndex .links dl{height:195px;width:174px;border-left:1px solid #ccc;float:left;}
+#linksIndex .linksIndex .links dl dt{line-height:31px;font-size:15px;color:#666;border-left:2px solid #fe8baa;text-indent:20px;margin-bottom:10px;}
+#linksIndex .linksIndex .links dl dd{line-height:28px;font-size:12px;text-indent:22px;}
+#linksIndex .linksIndex .links dl dd a{color:#999;}
+#linksIndex .linksIndex .contact{width:279px;height:195px;float:right;border-left:1px solid #CCC;position:relative;}
+#linksIndex .linksIndex .contact span.tel400{display:block;line-height:32px;font-family:"微软雅黑";font-size:22px;color:#FE8BAA;text-indent:100px;}
+#linksIndex .linksIndex .contact span.tel400 span{display:block;width:85px;height:32px;background:url(images/nuomi_icon_bg.png) no-repeat -298px -39px;position:absolute;left:0;top:0;}
+#linksIndex .linksIndex .contact span.servicetime{display:block;text-align:right;color:#666;margin-left:10px;font-size:12px;line-height:20px;margin-top:15px;}
+#linksIndex .linksIndex .contact span.app{display:block;width:256px;height:113px;background:url(images/nuomi_icon_bg.png) no-repeat -126px -73px;position:absolute;right:0;bottom:0;}
+#linksIndex .icons{width:980px;margin:20px auto 0;position:relative;text-align:center;}
+#linksIndex .icons span{display:inline-block;background:url(images/nuomi_icon_bg.png) no-repeat;margin:0 5px;}
+#linksIndex .icons span.alipay{width:123px;height:40px;background-position:-259px -189px;}
+#linksIndex .icons span.approve{width:110px;height:40px;background-position:-272px -232px;}
+#linksIndex .icons span.webtrust{width:103px;height:40px;background-position:-279px -275px;}
+#linksIndex .copyright{width:980px;margin:20px auto;text-align:center;color:#666;font-size:12px;}
+#linksIndex .copyright a{color:#666;}

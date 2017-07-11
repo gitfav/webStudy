@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 500px;
+		height: 500px;
+		margin: 0 auto;
+		font-size: 25px;
+		font-family: 微软雅黑;
+		color: white;
+		background: purple;/*所有浏览器*/
+		background: orange\9;/*所有ie*/
+		background: green\0;/*ie8 ie9*/
+		+background: blue;/*ie7*/
+
+		+margin-top: 100px;
+	}
+	:root #box{
+		background: grey\9;/*ie9*/
+	}
+</style>
+</head>
+
+<body>
+
+<div id="box">
+	火狐：紫色
+	<br />
+	ie7:蓝色
+	<br />
+	ie8:绿色
+	<br />
+	ie9:灰色
+</div>
+
+
+
+</body>
+</html>

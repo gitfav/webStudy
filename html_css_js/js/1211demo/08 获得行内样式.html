@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+		
+	window.onload = function(){
+
+		// 抓到小狗和按钮
+		var btn = document.getElementById('btn');
+		var dog = document.getElementById('dog');
+
+		// 给按钮加单击事件
+		btn.onclick = function(){
+			// 获得小狗的行内样式
+			var re = dog.style.width;
+			var he = dog.style.height;
+			alert(he);
+		}
+
+
+	}
+
+</script>
+</head>
+
+<body>
+
+<input type="button" value="点我啊！" id="btn" />
+<br /><br />
+<img src="dog.jpg" id="dog" style="width:500px;height:300px;" />
+
+</body>
+</html>

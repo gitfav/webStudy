@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+*{
+	padding: 0px;
+	margin: 0px;
+}
+#news{
+	margin: 200px auto;
+	width: 350px;
+	height: 40px;
+	overflow: hidden;
+	border: 2px solid blue;
+	position: relative;
+}
+#news ul{
+	list-style: none;
+	position: absolute;
+	top: 0px;
+}
+#news ul li{
+	width: 350px;
+	height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	font-family: '微软雅黑';
+	color: white;
+}
+</style>
+
+<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		var c=0;
+		setInterval(function(){
+			c++;
+			if (c==6) {
+				$('#news ul').css('top','0px');
+				c=1;
+			};
+			var a=c*(-40);
+			$('#news ul').animate({'top':a+'px'}, 500);
+		},1000);
+	})
+	
+</script>
+</head>
+
+<body>
+
+	<div id="news">
+		<ul>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			<li style="background:orange;">谷歌收购Nest冷解读：智能家居春天还太远</li>
+			<li style="background:green;">90后小米员工离职创立安全套品牌“大象”</li>
+			<li style="background:blue;">特斯拉将在中国建免费充电站</li>
+			<li style="background:grey;">苹果谷歌从不参加CES，但它们却无处不在</li>
+			<li style="background:purple;">谷歌收购NEST，进军智能家居？错！</li>
+			
+		</ul>
+	</div>
+
+</body>
+</html>

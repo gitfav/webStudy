@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.tm{
+		width: 100px;
+		height: 200px;
+		border: 1px solid blue;
+		float: left;
+		margin: 10px;
+		position: relative;
+		overflow: hidden;
+	}
+	.tm ul{
+		width: 500px;
+		height: 200px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.tm ul li{
+		width: 100px;
+		height: 200px;
+		float: left;
+		list-style: none;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		// 解决有定时器的效果代码复用的问题：给每块区域都加一个定时器，用来控制这块区域的效果，并且和效果相关的控制变量等信息都私有化到这块区域中
+
+		// 对所有tm区域进行循环
+		$('.tm').each(function(){
+			// 将jquery形式的对象转成原生形式对象（因为只有原生形式的对象才能加属性和方法）
+			// this指向的调用他所在函数的对象
+			var jsthis = $(this)[0];
+			var jqthis = $(this);
+
+			jsthis.c = 0;
+			jsthis.run = function(){
+				jsthis.c++;
+				jsthis.c = (jsthis.c==5)?0:jsthis.c;
+				// 计算ul的left
+				var l = jsthis.c*-100;
+				// 让ul运动过来
+				jqthis.find('ul').animate({'left':l+'px'}, 500);
+			}
+			// 设置定时器，自动轮播
+			jsthis.timer = setInterval(jsthis.run,1000);
+		})
+		
+
+		// 给tm加鼠标移入事件
+		$('.tm').mouseenter(function() {
+			// 找到当前鼠标移入元素的原生形式
+			var jsthis = $(this)[0];
+
+			// 清理定时器
+			clearInterval(jsthis.timer);
+		});
+
+		// 给tm加鼠标移出事件
+		$('.tm').mouseleave(function() {
+			// 获得当前tm的原生对象形式
+			var jsthis = $(this)[0];
+
+			jsthis.timer = setInterval(jsthis.run,1000);
+		});
+	})
+</script>
+</head>
+
+<body>
+
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+<div class="tm">
+	<ul>
+		<li style="background:#FF7F27;"></li>
+		<li style="background:#22B14C;"></li>
+		<li style="background:#00A2E8;"></li>
+		<li style="background:#A349A4;"></li>
+		<li style="background:#ED1C24;"></li>
+	</ul>
+</div>
+
+
+
+</body>
+</html>

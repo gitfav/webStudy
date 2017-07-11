@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+window.onload = function(){
+	// var one = document.getElementById('one');
+	// one.style.color = 'red';
+
+	// 通过标签名抓元素
+	// 注意：通过标签名、class、name值抓到的元素返回的是一个数组
+	// var lis = document.getElementsByTagName('li');
+
+	// 通过class抓元素
+	// var lis = document.getElementsByClassName('hd');
+
+	// 通过name属性抓元素
+	var lis = document.getElementsByName('houdun');
+
+	for(var i=0;i<lis.length;i++){
+		lis[i].style.color = 'red';
+	}
+	// lis.style.color = 'red';
+	// lis[0].style.color = 'red';
+	// lis[1].style.color = 'red';
+	// lis[2].style.color = 'red';
+	// lis[3].style.color = 'red';
+	// lis[4].style.color = 'red';
+	// lis[5].style.color = 'red';
+	// lis[6].style.color = 'red';
+}
+
+</script>
+</head>
+
+<body>
+
+<ul id="list">
+	<li>后盾网 人人做后盾0</li>
+	<li id="one">后盾网 人人做后盾1</li>
+	<li class="hd">后盾网 人人做后盾2</li>
+	<li name="houdun">后盾网 人人做后盾3</li>
+	<li>后盾网 人人做后盾4</li>
+	<li name="houdun" class="hd">后盾网 人人做后盾5</li>
+	<li>后盾网 人人做后盾6</li>
+	<li class="hd">后盾网 人人做后盾7</li>
+	<li name="houdun">后盾网 人人做后盾8</li>
+</ul>
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		// $('#dog').on('click mouseover',function(e){
+		// 	alert('别瞎点！');
+		// 	// alert(e.type);
+		// })
+
+		// 解除元素身上的事件
+		// $('#dog').off('mouseover');
+
+		// 绑定一次性事件
+		$('#dog').one('click',function(){
+			alert('后会无期！');
+		})
+
+	})
+</script>
+</head>
+
+<body>
+
+<img src="dog.jpg" alt="" id="dog" />
+
+
+
+
+</body>
+</html>

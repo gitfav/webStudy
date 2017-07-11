@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	img{
+		border: 0px;
+	}
+
+	#di{
+		margin: auto;
+		width: 670px;
+		height: 240px;
+		border: solid 3px blue;
+		position: relative;
+	}
+	#di img{
+		float: left;
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#di ul{
+		position: absolute;
+		top: 200px;
+		left: 450px;
+	}
+	#di li{
+		list-style: none;
+		float: left;
+		padding: 5px;
+		background-color: #999999;
+		border-radius: 50%;
+		margin: 4px;
+		width: 15px;
+		height: 15px;
+		text-align: center;
+		line-height: 15px;
+		color: white;
+		font-family: Arial,Verdana,"宋体"; 
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+// <script type="text/javascript">
+	$(function(){
+		var c=0;
+		function run(){
+			c++;
+			c=(c==6)?0:c;
+			$('#di img').eq(c).fadeIn(300).siblings('img').hide();
+			$('#di li').stop().eq(c).css("background","#E43C3F").siblings().css("background","#999");
+		}
+
+		var timer=setInterval(run,2000);
+
+		$("#di ul li").mousemove(function(){
+			clearInterval(timer);
+			c=$(this).index();
+			$('#di img').eq(c).fadeIn(300).siblings('img').hide();
+			$('#di li').eq(c).css("background","#E43C3F").siblings().css("background","#999");
+		});
+
+		$("#di ul li").mouseout(function() {
+			timer=setInterval(run,2000);
+		});
+
+	})
+// </script>
+</head>
+
+<body>
+
+<div id="di">
+	<img src="./images/1.jpg" style="display:block" alt="" />
+	<img src="./images/2.jpg" alt="" />
+	<img src="./images/3.jpg" alt="" />
+	<img src="./images/4.jpg" alt="" />
+	<img src="./images/5.jpg" alt="" />
+	<img src="./images/6.jpg" alt="" />
+	<ul>
+		<li style="background:#E43C3F">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</div>
+
+</body>
+</html>

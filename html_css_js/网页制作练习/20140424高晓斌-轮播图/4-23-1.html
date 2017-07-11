@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-23-1</title>
+<script type="text/javascript" src="./js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="./js/js.js"></script>
+<style type="text/css">
+	/*清除边距*/
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	/*全局div*/
+	#menu{
+		width: 294px;
+		height: 501px;
+		border: 1px solid #E0E0E0;
+		margin: 50px auto;
+		position: relative;
+	}
+	/*上面隐藏的div及上部*/
+	#menu .hid{
+		width: 294px;
+		height: 475px;
+		position: absolute;
+		/*overflow: hidden;*/
+		/*border: 1px solid red;*/
+		left: 0px;
+		top: -40px;
+		overflow: hidden;
+	}
+	#menu .top{
+		width: 2060px;
+		height: 475px;
+		overflow: hidden;
+		/*border: 1px solid green;*/
+		position:absolute;
+		left: 0px;
+		top: 0px;
+		
+	}
+	#menu .top img{
+		width: 294px;
+		height: 475px;
+		position: relative;
+		float: left;
+	}
+	/*上部结束*/
+	/*下面部分*/
+	#menu .bom{
+		width: 294px;
+		height: 63px;
+		background: #fff;
+		border-top: 1px solid #B0AFAF;
+		position: absolute;
+		left: 1px;
+		top: 434px;
+		padding-top: 2px;
+	}
+	#menu .bom img{
+		width: 42px;
+		height: 63px;
+		float: left;
+	}
+	#menu .bom img.h{
+		opacity: 0.5;
+		filter:alpha(opacity:50);
+	}
+	/*下面结束*/
+	/*鼠标变动图标部分*/
+	#menu .pointer{
+		width: 42px;
+		height: 7px;
+		position: absolute;
+		left: 0px;
+		top: 428px;
+		background: url(./images/1.png) no-repeat -57px -86px;
+	}
+	/*鼠标变动图标部分*/
+</style>
+
+</head>
+
+<body>
+<div id="menu">
+<!-- 上面布局 -->
+<div class="hid">
+<div  class="top" id="top">
+	<img src="./images/1.jpg" alt="" />
+	<img src="./images/2.jpg" alt="" />
+	<img src="./images/3.jpg" alt="" />
+	<img src="./images/4.jpg" alt="" />
+	<img src="./images/5.jpg" alt="" />
+	<img src="./images/6.jpg" alt="" />
+	<img src="./images/7.jpg" alt="" />
+</div>
+</div>
+<!-- 上面布局结束 -->
+<!-- 鼠标变动符 -->
+<div  class="pointer" id="pointer"></div>
+<!-- 下面布局 -->
+	<div class="bom" id="bom">
+	<img src="./images/01.jpg" alt="" />
+	<img class="h" src="./images/02.jpg" alt="" />
+	<img class="h" src="./images/03.jpg" alt="" />
+	<img class="h" src="./images/04.jpg" alt="" />
+	<img class="h" src="./images/05.jpg" alt="" />
+	<img class="h" src="./images/06.jpg" alt="" />
+	<img class="h" src="./images/07.jpg" alt="" />	
+	</div>
+	<!-- 下面布局结束 -->
+</div>
+</body>
+</html>

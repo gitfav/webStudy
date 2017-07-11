@@ -1,0 +1,8 @@
+1G = 1024M
+1M = 1024K
+
+т╢нд╪Ч  10M
+jpg   1M
+png   2M
+gif 100K
+bmp 8M

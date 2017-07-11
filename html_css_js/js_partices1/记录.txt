@@ -1,0 +1,89 @@
+一、HTML内容
+   （1）textarea 标签   <textarea name="" id="liuyan" cols="30" rows="10"> cols表示宽度  rows表示行数。
+
+
+二、CSS内容
+    (1)overflow 属性规定当内容溢出元素框时发生的事情。
+    (2)z-index属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+    (3)transition(CSS3):属性是一个简写属性，用于设置四个过渡属性：
+    	transition-property
+    	transition-duration
+    	transition-timing-function
+    	transition-delay
+
+
+三、js内容
+(1)window.onload=checkform  checkform表示某函数，当页面加载完，经过window.onload事件处理器会调用它
+(2)parseInt()函数可解析一个字符串，并返回一个整数。详细看http://www.w3school.com.cn/jsref/jsref_parseInt.asp
+(3)setInterval()
+(4)setTimeout()
+(5)clearInterval()
+(6)split()方法用于把一个字符串分割成字符串数组
+(7)push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。
+(8)splice()方法向/从数组中添加/删除项目，然后返回被删除的项目。
+(9)
+document.documentElement.clientWidth
+
+document.documentElement.clientHeight
+
+document.body.clientWidth
+
+document.body.clientHeight
+ 
+body与documentElement这两个属性在浏览器的body设置成<body style="overflow:hidden">  时，得到的值是不同的。
+
+当有overflow:hidden时，body.clientHeight才是真实值，documentElement.clientHeight是没有滚动条的值。
+ 
+IE，FIREFOX中是这样的。其它浏览器没有测试。
+
+
+
+1.遍历DOM
+	节点类型：每个节点类型都有一个关联值，保存在属性nodeType里。
+		常用的属性：nodeType=1 节点类型为：元素  nodeType=2 节点类型为：属性  nodeType=3 节点类型为：文本（包	    	    含空白。
+        (1)childNodes：子节点。
+	   假设有列表<ol>，且包含3个子节点<li>,每个子节点有文本。
+	   获得<ol>ID:		var olElement = document.getElementById("toDolist");
+	   <ol>的子集包含在此对象里:olElement.childNodes
+	   可以用数组那样处理集合：
+	   var count = 0;
+	   for(var i=0;i<olElement.childNodes.length;count++){
+		if(olElement.childNodes[i].nodeType==1)  count++;
+	   }
+	(2)firstChild 和 lastChild 选择第一个和最后一个子元素  
+		var lastChild=olElement.lastChild;
+	(3)同上的还有parentNode(父节点),nextSibling(下一个兄弟节点),previousSibling(上一个兄弟节点)
+	(4)nodeValue:返回文本节点里的内容。
+		text=olElement.childNodes[i].nodeValue;
+	(5)getElementsByTagName():访问页面里的元素。
+		如：var myDivs=document.getElementsByTagName("div");
+		又如:    var listItems = olElement.getElementsByTagName("li");
+		    var Tlength=listItems.length;
+	(6)getAttribute()方法读取属性值。
+		如：<div id="id1" title="report">here is some text.</div>
+		    var mynode=document.getElementById("id1");
+		    alert(mynode.getAttribute("title"));
+	(7)setAttribute()方法添加属性，有两个参数，一个要添加的属性 ，一个添加属性值。
+		var mypara=document.getElementById("id1");
+		mypara.setAttribute("id","new id")   //覆盖原来的属性
+
+2.使用脚本操作DOM
+	（1）createElement() 可以新建任何类型的标准HTML元素，入p、h1~6、table、li等。
+		如： var newDiv = document.createElement("div");
+	（2）createTextNode() 创建文本内容。
+		如： var newText = document.createTextNode("here is some text content");
+	（3）cloneNode() 用于复制节点。
+		如： var myDiv = document.getElementById("id1");
+		     var newDiv=myDiv.cloneNode(true);//只要是true时才能把myDiv里的元素全部复制到新元素中。如果是									flase新元素与原始节点相同，但没有子节点。
+	（4）前面都是创建新节点，但都未放入DOM中。
+	     appendChild() 需要获取父节点，然后调用此函数
+		如： var newText=document.createTextNode("here is some text content");
+		     var myDiv = document.getElementById("id1");
+		     myDiv.appendChild(newDiv);
+		把此节点放入父节点末尾。
+	（5）insertBeefore() 可以指定一个节点，然后把新节点插入到它前面。有两个参数。
+		     myDiv.insertBeefore(newPara,para2); 前者参数是指要插入的新节点，后者是指新节点在前要插入的节点
+	（6）replaceChild()可以把父元素现有的一个子节点替换另一个节点。也有两个参数。前新后旧。
+	（7）removeChild()用于从DOM删除子节点。
+		var removedItem = myDiv.removeChild(myPara);     //删除元素，并可以让它返回原值。
+		alery("Item with id "+reIt.getAttribute("id")+" has been remove.")

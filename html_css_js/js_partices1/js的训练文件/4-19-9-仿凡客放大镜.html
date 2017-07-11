@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-19-凡客放大镜</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#left{
+		width: 400px;
+		height: 400px;
+		border: 1px solid green;
+		position: relative;
+		float: left;
+		background: url(./images/400.jpg);
+	}
+	#sekuai{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background-color: #E6EAF3;
+		opacity: 0.6;
+		filter:alpha(opacity=60);
+		display: none;
+	}
+	#gaizi{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background-color: #f00;
+		opacity: 0;
+		filter:alpha(opacity=0);
+	}
+	#right{
+		width: 400px;
+		height: 400px;
+		float: left;
+		border: 1px solid #999;
+		overflow: hidden;
+		position: relative;
+		display: none;
+	}
+	#right #pic{
+		width: 800px;
+		height: 800px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var left=document.getElementById('left');
+		var sekuai=document.getElementById('sekuai');
+		var gaizi=document.getElementById('gaizi');
+		var pic=document.getElementById('pic');
+		var right=document.getElementById('right');
+		gaizi.onmousemove=function(e){
+			var re=window.event||e;
+			//获得事件源
+			var m_left=re.offsetX||re.layerX;
+			var m_top=re.offsetY||re.layerY;
+			// alert(m_top)
+			//获得鼠标到事件源的距离(ie和非ie的情况下)
+			var sekuai_left=m_left-100;
+			var sekuai_top=m_top-100;
+			if (sekuai_left>200) {sekuai_left=200};
+			if (sekuai_left<0) {sekuai_left=0};
+			if (sekuai_top>200) {sekuai_top=200};
+			if (sekuai_top<0) {sekuai_top=0};
+			//判断鼠标是不是在left的div里面，如果不在就拉回来
+			sekuai.style.left=sekuai_left+'px';
+			sekuai.style.top=sekuai_top+'px';
+			//让鼠标在色块中间，并让色块移动。
+		
+		//左侧结束
+		var pic_l=sekuai_left*-2;
+		var pic_t=sekuai_top*-2;
+		pic.style.left=pic_l+'px';
+		pic.style.top=pic_t+'px';
+}
+		//右侧结束
+		gaizi.onmouseover=function(){
+			right.style.display='block';
+			sekuai.style.display='block'
+		}
+		gaizi.onmouseout=function(){
+			right.style.display='none';
+			sekuai.style.display='none'
+		}
+		//加入鼠标移到和鼠标移除的效果。
+	}
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="sekuai"></div>
+	<div id="gaizi"></div>
+</div>
+<div id="right">
+	<img id="pic" src="./images/800.jpg" alt="" />
+</div>
+</body>
+</html>

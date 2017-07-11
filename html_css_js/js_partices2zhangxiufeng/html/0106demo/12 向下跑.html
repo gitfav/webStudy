@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+	// document.documentElement.clientHeight;
+window.onload = function(){
+	// 抓到图片
+	var ren = document.getElementById('ren');
+
+	var timer = setInterval(function(){
+		// 获得图片原有的top值
+		var old_top = parseInt(ren.style.top);//获得ren这个元素行内样式中的top属性值
+		var new_top = old_top+4;
+		// 将新值赋值回去
+		ren.style.top = new_top+'px';
+		// 判断停止条件
+		if(new_top>=300){
+			// 清理定时器
+			clearInterval(timer);
+		}
+	},50)
+}
+
+
+
+</script>
+</head>
+
+<body>
+
+<img src="dr.gif" id="ren" style="position:absolute;top:10px;left:500px;width:180px;" />
+
+
+
+
+</body>
+</html>

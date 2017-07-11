@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	img{
+		border: 0px;
+	}
+	a{
+		text-decoration: none;
+	}
+	li{
+		list-style:none;
+	}
+	.tab{
+		margin: auto;
+		width: 600px;
+		height: 350px;
+		border: 2px solid blue;
+	}
+	.tab .shang{
+		width: 600px;
+		height: 50px;
+		position: relative;
+	}
+	.tab .shang ul{
+		float: left;
+	}
+	.tab .shang ul li{
+		float: left;
+		width: 150px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 22px;
+		color: white;
+		font-family: 微软雅黑;
+		background-color: 
+	}
+	.tab .neirong{
+		width: 580px;
+		height: 270px;
+		padding: 15px 10px;
+	}
+	.tab .neirong .neibu{
+		width: 580px;
+		height: 270px;
+		text-align: center;
+		line-height: 270px;
+		font-size: 70px;
+		font-family: 微软雅黑;
+		color: white;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var tab=document.getElementById("tabs");
+		var neirongs=document.getElementById("neirongs");
+		var lis=tab.getElementsByTagName("li");
+		var divs=neirongs.getElementsByTagName("div");
+		var a;
+		for(var i=0;i<lis.length;i++){		//遍历lis1-5
+			lis[i].onmouseover=function(){
+				for(var j=0;j<lis.length;j++){
+					if(this==lis[j]) {a=j;}//找出当前指标所指的li。
+				}
+				for(var x=0;x<lis.length;x++){
+					if (a==x) {
+						divs[x].style.display="block";
+					}
+					else{
+						divs[x].style.display="none";
+					}
+				}
+			}
+		}
+	}
+</script>
+
+</head>
+
+<body>
+<div class="tab" id="tabs">
+	<div class="shang">
+		<ul>
+			<li style="background-color:red">话费</li>
+			<li style="background-color:green">旅游</li>
+			<li style="background-color:orange">彩票</li>
+			<li style="background-color:purple">游戏</li>
+		</ul>
+	</div>
+
+	<div class="neirong" id="neirongs">
+		<div class="neibu" style="background-color:red;display:block;">话费内容</div>
+		<div class="neibu" style="background-color:green;display:none;">旅游内容</div>
+		<div class="neibu" style="background-color:orange;display:none;">彩票内容</div>
+		<div class="neibu" style="background-color:purple;display:none;">游戏内容</div>
+	</div>
+</div>
+</body>
+</html>

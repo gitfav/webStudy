@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function(){
+
+		var btn = document.getElementById('btn');
+		var box = document.getElementById('box');
+
+		// 给按钮加单击事件
+		btn.onclick = function(){
+			// 创建新的input标签
+			var new_input = document.createElement('input');
+			// 给input加属性
+			new_input.setAttribute('type','file');
+			// 将新元素追加
+			box.appendChild(new_input);
+		}
+
+	}
+</script>
+</head>
+
+<body>
+
+<input type="button" value="点击按钮增加上传框" id="btn" />
+<br /><br />
+<div id="box">
+	<input type="file" />
+</div>
+
+
+</body>
+</html>

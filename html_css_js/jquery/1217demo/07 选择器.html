@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		// 只要是css选择器，都能用在jquery中
+		// $('#one').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中的儿子辈的p标签
+		// $('#box>p').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是紧邻在#one后面的p标签
+		// $('#one+p').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#one后面的所有的同级p标签
+		// $('#one~p').css({'color':'red',"font-size":'30px'})
+
+
+		// 选择的是#box中第一个p标签
+		// $('#box p:first').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中的p标签，排除掉#one
+		// $('#box p:not(#one)').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中序号是偶数的p标签
+		// $('#box p:even').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中序号是3的p标签
+		// $('#box p:eq(3)').css({'color':'red',"font-size":'30px'})
+
+
+		// 选择的是#box中序号大于2的p标签
+		// $('#box p:gt(2)').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中内容含有"签3"的p标签
+		// $('#box p:contains(签3)').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中里面含有span的p标签
+		// $('#box p:has(span)').css({'color':'red',"font-size":'30px'})
+
+
+		// 选择的是#box中有id属性的p标签
+		// $('#box p[id]').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中time属性值为today的p标签
+		// $('#box p[time=today]').css({'color':'red',"font-size":'30px'})
+
+		// 选择的是#box中class值不是hd的元素
+		// $('#box p[class!=hd]').css({'color':'red',"font-size":'30px'})
+
+
+
+
+	})
+</script>
+</head>
+
+<body>
+
+
+
+<div id="box">
+	<p>我们是p标签0</p>
+	<p id="one">我们是p标签1</p>
+	<p id="two">我们是p标签2</p>
+	<p time='today'>我们是p标签3</p>
+	<p>我们是p标签4 <span>我们是span</span></p>
+	<p time='today'>我们是p标签5</p>
+	<p class="hd">我们是p标签6 <span>我们是span</span></p>
+	<p class="hd">我们是p标签7</p>
+	<div>
+		<p>我也是p标签啊</p>
+		<p>我也是p标签啊</p>
+		<p>我也是p标签啊</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>

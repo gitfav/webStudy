@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<!-- 红色 red
+蓝色 blue
+绿色 green
+黄色 yellow
+白色 white
+黑色 black
+橙色 orange
+灰色 grey
+粉色 pink
+紫色 purple
+ -->
+
+<!--  顶部 top
+ 底部 bottom
+ 左侧 left
+ 右侧 right
+ 水平居中 center
+ 垂直居中 middle -->
+
+<!-- 合并单元格 -->
+<!-- 1、找到要合并的单元格 -->
+<!-- 2、保留要合并的第一个，删掉后面的 -->
+<!-- 3、指定保留下来的单元格占的行数和列数 -->
+<!-- 左右关系合并：colspan -->
+<!-- 上下关系合并：rowspan -->
+
+
+
+<!-- table表示这个是一个表格 -->
+<!-- tr表示一行 -->
+<!-- td表示一个单元格 -->
+<table border="1" width="700" height="500" align="center">
+	<!-- 第一行 -->
+	<tr height="50" bgcolor="green" align="center" valign="top">
+		<!-- td{后盾网}*6 -->
+		<td></td>
+		<td>周一</td>
+		<td>周二</td>
+		<td>周三</td>
+		<td>周四</td>
+		<td>周五</td>
+	</tr>
+	<!-- 第一行结束 -->
+	<!-- tr*4>td{后盾网}*6 -->
+
+	<!-- 第二行 -->
+	<tr>
+		<td>第一节课</td>
+		<td>数学</td>
+		<td>语文</td>
+		<td colspan="2">物理</td>
+		<td>体育</td>
+	</tr>
+	<!-- 第二行结束 -->
+
+	<!-- 第三行 -->
+	<tr>
+		<td>第二节课</td>
+		<td>语文</td>
+		<td width="200" height="150" bgcolor="red" align="center" ><strong>数学</strong></td>
+		<td>物理</td>
+		<td rowspan="3">英语</td>
+		<td>体育</td>
+	</tr>
+	<!-- 第三行结束 -->
+
+	<!-- 第四行 -->
+	<tr>
+		<td>第三节课</td>
+		<td>英语</td>
+		<td>物理</td>
+		<td>语文</td>
+		
+		<td>数学</td>
+	</tr>
+	<!-- 第四行结束 -->
+
+	<!-- 第五行 -->
+	<tr>
+		<td>第四节课</td>
+		<td>物理</td>
+		<td>体育</td>
+		<td>语文</td>
+		
+		<td>英语</td>
+	</tr>
+	<!-- 第五行结束 -->
+
+</table>
+
+
+</body>
+</html>

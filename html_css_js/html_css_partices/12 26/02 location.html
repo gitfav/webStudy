@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+window.onload=function(){
+	t=document.getElementById("t")
+	var a;
+	a=9;
+	function ab(){
+		t.innerHTML=a;
+		if(a==5){
+			location.replace("http://www.12306.cn");
+		}
+		a--;
+	}
+	setInterval(ab,1000);
+}
+</script>
+</head>
+
+<body>
+<div>距离回家还有<span id='t'>10</span>天</div>
+</body>
+</html>

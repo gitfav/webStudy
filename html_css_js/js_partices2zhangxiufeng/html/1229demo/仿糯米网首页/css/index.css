@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+
+/*顶部广告*/
+#topad{
+	width: 100%;
+	height: 85px;
+	background: #D4B4BF;
+	padding-top: 4px;
+	position: relative;
+}
+#topad a{
+	display: block;
+	width: 980px;
+	height: 80px;
+	margin: 0 auto;
+	background: url(../images/topad.jpg) no-repeat;
+}
+#topad .close{
+	width: 10px;
+	height: 10px;
+	background: url(../images/bg.png) no-repeat right -2356px;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+}
+#topad .tab{
+	position: absolute;
+	top: 67px;
+	right: 10px;
+}
+#topad .tab li{
+	width: 10px;
+	height: 10px;
+	background: #CCCCCC;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50%;
+}
+#topad .tab li.index{
+	background: #FF6699;
+}
+/*顶部广告结束*/
+
+
+/*顶部信息区域*/
+#info{
+	width: 100%;
+	height: 28px;
+	border-top: 1px solid #DFDFDF;
+	border-bottom: 1px solid #DFDFDF;
+}
+#info .center{
+	width: 980px;
+	height: 28px;
+	/*background: blue;*/
+	margin: 0 auto;
+	/*border-left: 5px solid purple;*/
+	/*border-right: 5px solid purple;*/
+}
+#info .center .left{
+	width: 133px;
+	/*border-right: 5px solid orange;*/
+	float: left;
+	height: 28px;
+}
+#info .center .left .city{
+	line-height: 28px;
+	font-weight: 700;
+	float: left;
+}
+#info .center .left .change{
+	line-height: 28px;
+	color: #73ABC9;
+	float: left;
+	padding-left: 12px;
+}
+#info .center .right{
+	float: right;
+	height: 28px;
+	/*border-left: 5px solid green;*/
+}
+#info .center .right .order{
+	display: block;
+	width: 68px;
+	float: left;
+	color: #73ABC9;
+	line-height: 28px;
+	background: url(../images/bg.png) no-repeat right -1292px;
+}
+#info .center .right .nm{
+	display: block;
+	float: left;
+	width: 99px;
+	height: 28px;
+	color: #73ABC9;
+	line-height: 28px;
+	text-indent: 20px;
+	background: url(../images/bg.png) no-repeat right -1320px;
+}
+#info .center .right .login_reg{
+	display: block;
+	width: 64px;
+	height: 28px;
+	float: left;
+	color: #73ABC9;
+	line-height: 28px;
+	text-align: center;
+	background: url(../images/bg.png) no-repeat -381px -1292px;
+
+}
+/*顶部信息区域结束*/
+
+
+/*搜索区域*/
+#search{
+	width: 980px;
+	height: 101px;
+	margin: 0 auto;
+	border: 2px solid orange;
+	border-top: none;
+	position: relative;
+}
+#search .logo{
+	display: block;
+	width: 320px;
+	height: 45px;
+	border-right: 1px solid #DFDFDF;
+	position: absolute;
+	top: 29px;
+	left: 0;
+	background: url(../images/bg.png) no-repeat -82px -1594px;
+}
+#search form{
+	width: 410px;
+	height: 40px;
+	/*border-right: 1px solid blue;*/
+	position: absolute;
+	top: 29px;
+	left: 351px;
+}
+#search form .keyword{
+	width: 310px;
+	height: 38px;
+	border: 1px solid #DFDFDF;
+	border-right: none;
+	color: #999;
+	text-indent: 14px;
+	float: left;
+	line-height: 38px;
+}
+#search form .sub{
+	width: 99px;
+	height: 40px;
+	background: url(../images/bg.png) no-repeat right -1655px;
+	border: none;
+	color: white;
+	font-size: 17px;
+	font-family: 微软雅黑;
+	text-indent: 28px;
+	float: left;
+}
+#search .tags{
+	line-height: 22px;
+	height: 22px;
+	position: absolute;
+	top: 76px;
+	left: 358px;
+}
+#search .tags a{
+	color: #999;
+	float: left;
+	padding-right: 15px;
+}
+#search .back{
+	width: 132px;
+	height: 40px;
+	display: block;
+	/*border: 2px solid blue;*/
+	position: absolute;
+	right: 57px;
+	top: 29px;
+	background: url(../images/bg.png) no-repeat right -1741px;
+}
+
+/*搜索区域结束*/

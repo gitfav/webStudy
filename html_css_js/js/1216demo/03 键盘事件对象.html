@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript">
+	
+window.onkeydown = function(e){
+
+	// 获得事件对象
+	var ev = window.event || e;
+	// alert(ev.keyCode);
+	// 将unicode编码变成本身的字符
+	// var word = String.fromCharCode(ev.keyCode);
+	// alert(word);
+	// alert(ev.ctrlKey);
+
+
+	// 按住ctrl和回车键进行快速提交
+	if(ev.ctrlKey && ev.keyCode==13){
+		alert('提交留言！');
+	}
+
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+
+
+
+
+</body>
+</html>

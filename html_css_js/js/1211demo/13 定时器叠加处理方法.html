@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+window.onload = function(){
+	// 抓元素
+	var btn = document.getElementById('btn');
+	var box = document.getElementById('box');
+	// 定时器叠加解决方案：在设置定时器之前，先清理掉原来的定时器
+	// 函数运行的时候，每次都会开辟新的空间
+	var timer;//声明timer ，保证第一次清理的时候不报错
+	
+	// 给按钮加单击事件
+	btn.onclick = function(){
+		clearInterval(timer);
+		// 设置定时器，每隔一段时间就改变width
+		timer = setInterval(function(){
+			// 获得当前的width
+			var old_width = box.style.width;
+			// 计算新的宽度
+			var new_width = parseInt(old_width)+3;
+			// 将新的宽度赋值回去
+			box.style.width = new_width+'px';
+		},200)
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+
+<input type="button" value="点我" id="btn" />
+<br /><br />
+<div id="box" style="width:200px;height:200px;background:blue;"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#tab{
+		width: 600px;
+		height: 500px;
+		border: 2px solid blue;
+		margin: 10px auto;
+		position: relative;
+	}
+	#tab ul li{
+		float: left;
+		list-style: none;
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 30px;
+		font-family: 微软雅黑;
+		color: white;
+	}
+	#tab .con{
+		width: 580px;
+		height: 430px;
+		position: absolute;
+		top: 60px;
+		left: 10px;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+// window.onload = function(){
+// 	var tab = document.getElementById('tab');
+// 	var lis = tab.getElementsByTagName('li');
+// 	var cons = tab.getElementsByClassName('con');
+
+// 	// 循环，给li加事件
+// 	for(var i=0;i<lis.length;i++){
+// 		 // 给每个li加属性
+// 		 lis[i].xuhao = i;
+// 		// 给循环到的li加鼠标移入事件
+// 		lis[i].onmouseover = function(){
+// 			// 循环div，让当前移入的li的序号对应的div显示，其他的隐藏
+// 			// 先让所有的div隐藏
+// 			for(var j = 0;j<cons.length;j++){
+// 				cons[j].style.display = 'none';
+// 			}
+// 			// 让div中对应序号的显示
+// 			cons[this.xuhao].style.display = 'block';
+// 		}
+// 	}
+// }
+
+$(function(){
+	$('#tab ul li').mouseover(function() {
+		//获得当前鼠标移入的元素的序号
+		var c = $(this).index();
+		// 让c号div显示，其他的隐藏
+		$('#tab .con').eq(c).show().siblings('.con').hide();
+	});
+})
+
+
+
+
+</script>
+</head>
+
+<body>
+
+<div id="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">体育</li>
+		<li style="background:#FF7F27;">娱乐</li>
+	</ul>
+	<div class="con" style="background:#22B14C;display:block;"></div>
+	<div class="con" style="background:#00A2E8;"></div>
+	<div class="con" style="background:#FF7F27;"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#dan{
+		position: absolute;
+		left: 0px;
+		top: 50px;
+	}
+</style>
+<script type="text/javascript">
+
+window.onload = function(){
+	var dan = document.getElementById('dan');
+	var speed = 2;
+	setInterval(function(){
+		// 获得旧的left值
+		if(document.all){
+			var old_left = dan.currentStyle.left;
+		}else{
+			var old_left = getComputedStyle(dan,null).left;
+		}
+		// 计算新的left值
+		var new_left = parseInt(old_left)+speed;
+		// 将新值赋值回去
+		dan.style.left = new_left+'px';
+
+		if(new_left==800){
+			speed = -2;
+		}
+
+		if(new_left==0){
+			speed = 2;
+		}
+	},2)
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<img src="dan.gif" id="dan" />
+</body>
+</html>

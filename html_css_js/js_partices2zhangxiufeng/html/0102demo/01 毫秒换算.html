@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+
+	var time = 100000000;
+	var hours = parseInt(time/(60*60*1000));//取整数
+	
+	document.write(parseInt("19",1)+'<br>');
+	// alert(hours);
+	// 算完小时之后还剩余的毫秒数
+	time = time%(60*60*1000);
+	var minutes = parseInt(time/(60*1000));
+	// alert(minutes);
+	// 算完分钟之后还剩余的毫秒数
+	time = time%(60*1000);
+	var seconds = parseInt(time/1000);
+	document.write('1亿毫秒相当于'+hours+'小时'+minutes+'分钟'+seconds+'秒');
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

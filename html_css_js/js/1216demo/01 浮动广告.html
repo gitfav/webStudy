@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#ad{
+		width: 300px;
+		height: 300px;
+		background: url(ad.jpg) no-repeat;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#close{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var x=1,y=1;
+		var ad = document.getElementById('ad');
+		var close = document.getElementById('close');
+		// 可视区域宽高
+		var window_width = document.documentElement.clientWidth;
+		var window_height = document.documentElement.clientHeight;
+
+		// 获得最大的top和left值
+		var max_left = window_width - 300;
+		var max_top = window_height-300;
+
+		// 设置定时器，开始跑
+		setInterval(function(){
+			// 获得当前的left和top
+			if(document.all){
+				var old_left = ad.currentStyle.left;
+				var old_top = ad.currentStyle.top;
+			}else{
+				var old_left = getComputedStyle(ad,null).left;
+				var old_top = getComputedStyle(ad,null).top;
+			}
+
+			// 计算新的top和left
+			var new_left = parseInt(old_left)+x;
+			var new_top = parseInt(old_top)+y;
+
+			// 将新值赋值回去
+			ad.style.left = new_left+'px';
+			ad.style.top = new_top+'px';
+
+			// // 判断是否触底
+			// if(new_top==max_top){
+			// 	// alert('到底啦！');
+			// 	y=-1;
+			// }
+			// // 判断到顶了
+			// if(new_top==0){
+			// 	y=1;
+			// }
+
+			if(new_top==max_top || new_top==0){
+				y=-1*y;
+			}
+
+			if(new_left==max_left){
+				x = -1;
+			}
+			if(new_left==0){
+				x = 1;
+			}
+		},5)
+	}
+</script>
+</head>
+
+<body>
+
+<div id="ad">
+	<img src="close.jpg"  id="close" />
+</div>
+
+
+
+</body>
+</html>

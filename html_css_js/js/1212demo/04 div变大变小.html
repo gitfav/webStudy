@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 200px;
+		height: 200px;
+		background: green;
+
+	}
+</style>
+<script type="text/javascript">
+	
+
+	window.onload = function(){
+
+		var btn = document.getElementById('btn');
+		var box = document.getElementById('box');
+		var c = 5;
+
+		// 给按钮绑定单击事件
+		btn.onclick = function(){
+			// 设置定时器
+			var timer = setInterval(function(){
+				// 先获得旧的宽度
+				var old_width = box.style.width;
+				// 计算新值
+				var new_width = parseInt(old_width)+c;
+				// 将新值赋值给宽度和高度
+				box.style.width = new_width+'px';
+				box.style.height = new_width+'px';
+				// 判断变化时刻
+				if(new_width==400){
+					c = -5;
+				}
+				// 停止
+				if(new_width==200){
+					clearInterval(timer);
+				}
+			},100)
+		}
+
+	}
+</script>
+</head>
+
+<body>
+
+<input type="button" value="按钮" id="btn" />
+<br /><br />
+<div id="box" style="width:200px;"></div>
+
+
+
+</body>
+</html>

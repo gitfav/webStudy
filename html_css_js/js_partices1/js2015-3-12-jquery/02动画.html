@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		$('#but').click(function() {
+			// $('#dog').fadeOut(1000);
+			// $('#dog').fadeIn(1000);
+
+			$('#dog').stop().fadeTo(1000,0.3,function(){
+				$('#dog').fadeTo(1000,1);
+			});
+		});
+	})
+	
+</script>
+</head>
+
+<body>
+
+	<input type="button" value="点我" id="but" /><br>
+	<img src="dog.jpg" alt="" id="dog" />
+
+</body>
+</html>

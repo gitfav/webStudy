@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var btn = document.getElementById('btn');
+		var zhi = document.getElementById('zhi');
+
+		// 给按钮加事件
+		btn.onclick = function(){
+			// 设置定时器，让图片运动
+			var timer = setInterval(function(){
+				// 获得当前left值
+				var old_left = zhi.style.left;
+				// 计算新的left值
+				var new_left = parseInt(old_left)+2;
+				// 将新值赋值回去
+				zhi.style.left = new_left+'px';
+
+				// 跑到500px,的时候停止
+				if(new_left==500){
+					clearInterval(timer);
+				}
+			},10)
+		}
+	}
+</script>
+</head>
+
+<body>
+<input type="button" value="走你~" id="btn" />
+<br /><br />
+<img src="dr.gif" alt="" id="zhi" style="position:absolute;left:10px;top:50px;" />
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+// 需要控制body里面元素的时候，就加window.onload
+
+// 页面加载完之后执行
+window.onload = function(){
+	// 获得图片元素
+	var dr = document.getElementById('dr');
+
+	setInterval(function(){
+		// 获得元素当前的left值
+		var old_left = parseInt(dr.style.left);
+		// 计算新的left值
+		var new_left = old_left+5;
+		// alert(new_left)
+		// 将新的left值赋值回去
+		dr.style.left = new_left+'px';
+	},30)
+}
+
+
+</script>
+</head>
+
+<body>
+
+
+<img src="dr.gif" style="position:absolute;left:0px;top:50px;width:200px;" id="dr" />
+
+
+
+
+</body>
+</html>

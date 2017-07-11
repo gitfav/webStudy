@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	.d{
+		width: 400px;
+		height: 300px;
+		position: relative;
+		left: 100px;
+		top:50px;
+		background: red;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById('d').onclick=function(e){
+			var ev=e||window.event;
+			alert(ev.clientX);
+
+			var I=ev.offsetX||ev.layerX;
+			alert(I);
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div class="d" id="d">
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#ok{
+		color: green;
+		display: none;
+	}
+	#no{
+		color: red;
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	
+window.onload = function(){
+	var uname = document.getElementById('uname');
+	var ok = document.getElementById('ok');
+	var no = document.getElementById('no');
+
+	// 给输入框加失去焦点的事件
+	uname.onblur = function(){
+		// 获得用户输入的内容
+		var content = uname.value;
+		// 定义正则
+		var reg = /^[a-z]{6,20}$/i;
+		// 验证	
+		var r = reg.test(content);
+		if(r){
+			ok.style.display = 'inline';
+			no.style.display = 'none';
+		}else{
+			no.style.display = 'inline';
+			ok.style.display = 'none';
+		}
+
+
+	}
+}
+
+</script>
+</head>
+
+<body>
+
+用户名：<input type="text" id="uname" />
+<span id="ok">可以注册！</span>
+<span id="no">请确保用户名是6-20位纯字母</span>
+
+
+
+</body>
+</html>

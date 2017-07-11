@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBpC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<!-- 引入jquery -->
+<!-- script[src=jquery-1.7.2.min.js] -->
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		// 链式操作
+		// 齐乐.扇两巴掌.给100块.踢两脚.赏一口饭.介绍个美女
+
+		// $('#box p').eq(3).css({'color':'blue','font-size':'20px'});
+
+		// $('#box p').first().css({'color':'blue','font-size':'20px'});
+
+		// $('#box p').has('span').css({'color':'blue','font-size':'20px'});
+
+		// $('#box p').not('#one').css({'color':'blue','font-size':'20px'});
+
+		// 截取结果中的1-4号元素
+		// $('#box p').slice(1,5).css({'color':'blue','font-size':'20px'});
+
+
+		// 选择的是#box里面的p标签里面的span标签
+		// $('#box p').find('span').css({'color':'blue','font-size':'20px'});
+
+		// 选择#one的父级元素
+		// $('#one').parent().css({'color':'blue','font-size':'20px'});
+		
+		// 选择#one的兄弟元素。
+		// $('#one').siblings().css({'color':'blue','font-size':'20px'});
+		//选择#one元素。siblings() 获得匹配集合中每个元素的同胞，通过选择器进行筛选是可选的。
+		//$('p').siblings('#one').css({'color':'blue','font-size':'20px'});
+
+	})
+
+
+
+</script>
+</head>
+
+<body>
+
+<div id="box">
+	<p>后盾网 人人做后盾0</p>
+	<p id="one">后盾网 人人做后盾1</p>
+	<p>后盾网 人人做后盾2</p>
+	<p>后盾网 人人做后盾3 <span>我是span标签</span></p>
+	<p>后盾网 人人做后盾4</p>
+	<p>后盾网 人人做后盾5 <span>我是span标签</span></p>
+	<p>后盾网 人人做后盾6</p>
+	<p>后盾网 人人做后盾7</p>
+	<div>
+		<p>我们也是p标签</p>
+		<p>我们也是p标签</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>

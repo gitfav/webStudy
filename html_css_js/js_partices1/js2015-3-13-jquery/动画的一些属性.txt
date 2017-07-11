@@ -1,0 +1,16 @@
+﻿停止原来执行的动作	stop();
+自动切换显隐	hide();	show();	toggle();
+动画属性(linear表示匀速)	animate({'width':'600px','height':'400px'},'linear')
+让选择物淡出淡入	fadeOut(5000);	fadeIn(5000);	fadeTo(1000,1);
+delay是让后面的运动延迟执行	delay(2000)
+
+获得元素属性	var re = $('#title').attr('hd');
+设置属性	var re = $('#title').attr('class','qqqqqqqqqqqqqqqqq');
+追加class	$('#title').addClass('qqqqqqqq');
+删除某个class	$('#title').removeClass('hs');
+获得元素所有内容	var con = $('#title').html();
+			alert(con);
+设置元素内容	$('#title').html('我是新设置的');
+
+给属性加滚动条事件，当此id滚动时发生的事。	scroll();
+不加参数是获得当前滚动上去的高度scrollTop()，加参数是设置滚动条的高度scrollTop(value)。

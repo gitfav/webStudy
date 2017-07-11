@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+	.menu{
+		width: 200px;
+		height: 40px;
+		border: 3px solid blue;
+		margin: 10px auto;
+	}
+	.title{
+		display: block;
+		width: 200px;
+		height: 40px;
+		background: orange;
+		line-height: 40px;
+		font-size: 15px;
+		text-align: center;
+	}
+	.list{
+		width: 200px;
+		background: #eee;
+		line-height: 1.5em;
+		list-style: none;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	// 能用this的时候，就尽量用this
+	// 如果用jquery，那么将:
+	// mouseover 改成 mouseenter
+	// mouseout 改成 mouseleave
+
+$(function(){
+	// 给a标签加事件
+	// $('.title').hover(function() {
+	// 	$('.list').show();
+	// }, function() {
+	// 	$('.list').hide();
+	// });
+
+	$('.menu').hover(function() {
+		$(this).find('.list').show();
+	}, function() {
+		$(this).find('.list').hide();
+	});
+
+})
+	
+
+</script>
+</head>
+
+<body>
+
+<div class="menu">
+	<a href="" class="title">客户服务</a>
+	<ul class="list">
+		<li>我们是内容</li>
+		<li>我们是内容</li>
+		<li>我们是内容</li>
+		<li>我们是内容</li>
+	</ul>
+</div>
+
+
+
+</body>
+</html>

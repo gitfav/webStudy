@@ -1,0 +1,7 @@
+git开源中国（http://git.oschina.net/）
+
+git@git.oschina.net:jerise/wxmj.git（公司项目链接 ssh）
+https://git.oschina.net/jerise/wxmj.git
+
+ssh密钥默认放入 C:\Users\jeriseoff\.ssh 中
+在 http://git.oschina.net/oschina/git-osc/wikis/%E5%B8%AE%E5%8A%A9#ssh-keys 网站 有关于生成ssh和电脑与Git@osc链接教程

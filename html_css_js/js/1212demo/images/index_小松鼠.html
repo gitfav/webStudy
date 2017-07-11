@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload=function(){
+
+		// 抓取元素
+		var pic = document.getElementById('pic');
+		// 数组
+		arr=['1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png','9.png','10.png','11.png','12.png','13.png','14.png','15.png'];
+		num=0;
+		// 添加按钮事件
+		btn.onclick=function(){
+			// 定时器
+			setInterval(function(){
+				num++;
+				for (var i = 0; i < arr.length; i++) {
+					
+					
+					var lujing='images/'+arr[num]
+					pic.setAttribute('src',lujing)
+				};
+
+				
+			},100)
+		}
+
+
+
+	}
+</script>
+
+</head>
+
+<body>
+<input type="button" class="btn" value="开始" />
+<img src="1.png" alt="" class="pic" />
+</body>
+</html>

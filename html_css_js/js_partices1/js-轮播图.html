@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.head{
+		width: 100%;
+		height: 300px;
+		position: relative;
+	}
+	.zhong{
+		width: 250px;
+		height: 250px;
+		margin: auto;	
+		position: relative;
+		overflow: hidden;
+	}
+	.nei{
+		width: 1000px;
+		height: 200px;
+		position: relative;
+	}
+	.zhong img{
+		position: absolute;
+		float: left;
+	}
+	.xia{
+		width: 250px;
+		height: 50px;
+		position: relative;
+	}
+	.xia ul{
+		list-style:none;
+	}
+	.xia ul li{
+		float: left;
+		width: 40px;
+		height: 20px;
+		margin-right: 10px;
+		background-color: black;
+		opacity: 0.5;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var he=document.getElementById('nei');
+		var a=parseInt(he.style.left);
+		var i=10;
+		var ce=document.getElementById("uls");
+		var cf=ce.getElementsByTagName("li");
+		var l;
+		cf[0].style.backgroundColor='red';
+		function ab(){
+			he.style.left=a-250+'px';
+			a=parseInt(he.style.left);
+			for(var b=0;b<cf.length;b++){
+					if (b==(-a/250)) {
+						cf[b].style.backgroundColor='red';
+					}
+					else{
+						cf[b].style.backgroundColor='black';
+					}
+				}
+			
+			if(a==(-1000)){
+				a=250;
+			}
+		}
+		for(var j=0;j<cf.length;j++)
+			cf[j].onmouseover=function(){
+				for(var b=0;b<cf.length;b++){
+					if (this==cf[b]) {l=b}
+				}
+				he.style.left=-l*250+'px';
+				a=parseInt(he.style.left);
+				for(var b=0;b<cf.length;b++){
+					if(b==l){
+						cf[b].style.backgroundColor='red';
+					}
+					else{
+						cf[b].style.backgroundColor='black';
+					}
+				}
+				if(a==(-1000)){
+				a=250;
+			}
+		}
+		timer=setInterval(ab,2000);
+		he.onmouseover=function() {
+			clearInterval(timer);
+		}
+		he.onmouseout=function() {
+			timer=setInterval(ab,2000);
+		}
+	}
+</script>
+
+</head>
+
+<body>
+<div class="head">
+	<div class="zhong">
+		<div id="nei" class="nei" style="left:0px;">
+			<img src="./images/tu1.JPEG" style="left:0px" width="250px" height="200px" alt="" />
+			<img src="./images/tu2.JPEG" style="left:250px" width="250px" height="200px" alt="" />
+			<img src="./images/tu3.JPEG" style="left:500px" width="250px" height="200px" alt="" />
+			<img src="./images/tu4.JPEG" style="left:750px" width="250px" height="200px" alt="" />
+			<img src="./images/tu5.JPEG" style="left:1000px" width="250px" height="200px" alt="" />
+		</div>
+		<div class="xia">
+			<ul id="uls">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

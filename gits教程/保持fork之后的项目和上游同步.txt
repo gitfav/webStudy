@@ -1,0 +1,18 @@
+在fork好项目，拉到本地。在本地执行命令行方式 merge
+
+1、配置remote，指向上游仓库
+   git remote add upstream git@mobogit:group-moxueyuan/moxueyuan_framework.git
+2、检测是否配置成功
+   git fetch upstream
+   或者使用   
+   git remote -v  查看全部远程链接
+3、同步到本地
+   git merge upstream/dev
+4、推送到线上
+   git push
+
+$ git push  upstream dev:dev
+本地直接推送到上游
+
+
+git branch //查看分支

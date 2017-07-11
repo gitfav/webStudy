@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		// 全选
+		$('#quanxuan').click(function() {
+			$('#list :checkbox').attr('checked', 'checked');
+		});
+
+		// 全不选
+		$('#quanbuxuan').click(function() {
+			$('#list :checkbox').removeAttr('checked');
+		});
+
+		// 反选
+		$('#fanxuan').click(function() {
+			// 获得现在处在选中状态的元素
+			var cs = $('#list :checked');
+			// 全选
+			$('#list :checkbox').attr('checked', 'checked');
+			// 让刚才记录下的元素取消选择
+			cs.removeAttr('checked');
+		});
+
+	})
+</script>
+</head>
+
+<body>
+	<!-- table>tr*6>td{<input type="checkbox" />}+td{后盾网 人人做后盾} -->
+	<div style="width:500px;height:50px;margin:0 auto;">
+		<input type="button" value="全选" id="quanxuan" />
+		<input type="button" value="反选" id="fanxuan" />
+		<input type="button" value="全不选" id="quanbuxuan" />
+	</div>
+
+
+	<table border="1" align="center" id="list">
+		<tr>
+			<td>操作</td>
+			<td>标题</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" />
+			</td>
+			<td>后盾网 人人做后盾</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{
+	padding: 0;
+	margin: 0;
+}
+	div{
+		width: 300px;
+		height:150px;
+		border: 4px solid red;
+	}
+	#box1{
+		background: #22B14C;
+	}
+	#box2{
+		background: #FF7F27;
+		/*绝对定位*/
+		position: absolute;
+		top: 50px;
+		left: 100px;
+	}
+	#box3{
+		background: #00A2E8;
+	}
+</style>
+</head>
+
+<body>
+
+<!-- 绝对定位 -->
+<!-- 1、原来的位置不在被保留 -->
+<!-- 2、相对于离它最近的，有定位属性的，父级元素进行定位 -->
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+
+
+
+
+
+
+</body>
+</html>

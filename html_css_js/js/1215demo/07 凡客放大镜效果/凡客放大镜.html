@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{
+	padding: 0;
+	margin: 0;
+}
+	#left{
+		width: 400px;
+		height: 400px;
+		border: 1px solid blue;
+		margin: 10px;
+		background: url(400.jpg) no-repeat;
+		position: relative;
+		float: left;
+	}
+	#left #box{
+		width: 200px;
+		height: 200px;
+		background: #E6EAF3;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		filter: alpha(opacity=60);
+		display: none;
+	}
+	#right{
+		width: 400px;
+		height: 400px;
+		border: 1px solid black;
+		margin: 20px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		display: none;
+	}
+	#bigpic{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#left #cover{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: red;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		// 抓常用元素
+		var left = document.getElementById('left');
+		var box = document.getElementById('box');
+		var right = document.getElementById('right');
+		var bigpic = document.getElementById('bigpic');
+		var cover = document.getElementById('cover');
+
+
+		// 给盖子加鼠标移动事件
+		// 只要鼠标在里面移动，就获得鼠标的位置
+		cover.onmousemove = function(e){
+			// 获得事件对象
+			var ev = window.event || e ;
+			// 获得鼠标的位置
+			var mouse_left = ev.offsetX || ev.layerX;
+			var mouse_top = ev.offsetY || ev.layerY;
+			document.title = mouse_left+'|'+mouse_top;
+			// 计算色块的位置
+			var box_left = mouse_left-100;
+			var box_top = mouse_top-100;
+			// 判断色块的位置
+			if(box_left<0){
+				box_left=0;
+			}
+			if(box_left>200){
+				box_left=200;
+			}
+			if(box_top<0){
+				box_top=0;
+			}
+			if(box_top>200){
+				box_top=200;
+			}
+
+
+			// 给小色块赋值
+			box.style.left = box_left+'px';
+			box.style.top = box_top+'px';
+
+			// 计算右侧图片的位置
+			var bigpic_left = box_left*-2;
+			var bigpic_top = box_top*-2;
+
+			// 给右侧图片赋值
+			bigpic.style.left = bigpic_left+'px';
+			bigpic.style.top = bigpic_top+'px';
+		}
+
+		// 给盖子加鼠标移入事件
+		cover.onmouseover = function(){
+			// 让色块显示
+			box.style.display = 'block';
+			// 让右侧显示
+			right.style.display = 'block';
+		}
+
+		// 给盖子加鼠标移出事件
+		cover.onmouseout = function(){
+			// 让色块显示
+			box.style.display = 'none';
+			// 让右侧显示
+			right.style.display = 'none';
+		}
+	}
+</script>
+</head>
+
+<body>
+<div id="left">
+	<div id="box"></div>
+	<div id="cover"></div>
+</div>
+
+<div id="right">
+	<img src="800.jpg" alt="" id="bigpic" />
+</div>
+
+</body>
+</html>

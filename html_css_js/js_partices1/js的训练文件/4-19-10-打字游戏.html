@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>4-19-打字游戏</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#list li{
+	list-style: none;
+	float: left;
+	font-family: 微软雅黑;
+	font-size: 200px;
+	color: #333;
+	margin-left: 30px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var a=['A','B','C','D','E','F','G','H'];
+		window.onkeydown=function(e){
+			var re=window.event||e;
+			//获得事件流对象
+		var list=document.getElementById('list');
+		var li=list.getElementsByTagName('li');
+			var word=String.fromCharCode(re.keyCode);
+			//获得用户按键
+			for(i=0;i<li.length;i++){
+				if(word==li[i].innerHTML){
+					list.removeChild(li[i]);
+				var num=Math.floor(Math.random()*8);
+				var new_li=document.createElement('li');
+				new_li.innerHTML=a[num];
+				list.appendChild(new_li);
+				//循环，如果有一样的就删除，并添加随机数。
+				break;
+				//避免两个重复的被删除。执行一次便结束
+			}
+			}
+	}
+}
+</script>
+</head>
+
+<body>
+<ul id="list">
+	<li>A</li>
+	<li>B</li>
+	<li>C</li>
+	<li>D</li>
+	<li>E</li>
+</ul>
+</body>
+</html>

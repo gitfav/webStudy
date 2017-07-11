@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin:0px;
+	}
+	.bor{
+		width: 820px;
+		height: 460px;
+		position: relative;
+	}
+
+	.img_bor{
+		width: 780px;
+		height: 460px;
+		position: absolute;
+		float: left;	
+		overflow: hidden;
+	}
+	.img_bor div{
+		width: 780px;
+		height: 460px;
+		position: absolute;
+	}
+	.but_bor{
+		width: 40px;
+		height: 460px;
+		float: right;
+	}
+	.but_bor ul{
+		list-style: none;
+	}
+	.but_bor ul li {
+		margin-bottom: 5px;
+		width: 30px;
+		height: 20px;
+		background-color: rgb(150,150,150);
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		var i=1;
+		var j=0;
+		var div_one=$(".img_bor .div_one").offset().top;
+		var div_two=$(".img_bor .div_two").offset().top;
+		var div_three=$(".img_bor .div_three").offset().top;
+		var div_four=$(".img_bor .div_four").offset().top;
+		var div_five=$(".img_bor .div_five").offset().top;
+		var div_six=$(".img_bor .div_six").offset().top;
+		function hidden(){
+			a=i*(-460);
+			if(j==6){j=0;}
+			j++;
+			$(".img_bor .div_one").stop().animate({"top":div_one+a+'px'}, 500);
+			$(".img_bor .div_two").stop().animate({"top":div_two+a+'px'}, 500);
+			$(".img_bor .div_three").stop().animate({"top":div_three+a+'px'}, 500);
+			$(".img_bor .div_four").stop().animate({"top":div_four+a+'px'}, 500);
+			$(".img_bor .div_five").stop().animate({"top":div_five+a+'px'}, 500);
+			$(".img_bor .div_six").stop().animate({"top":div_six+a+'px'}, 500);
+			div_one=$(".img_bor .div_one").offset().top;
+			div_two=$(".img_bor .div_two").offset().top;
+			div_three=$(".img_bor .div_three").offset().top;
+			div_four=$(".img_bor .div_four").offset().top;
+			div_five=$(".img_bor .div_five").offset().top;
+			div_six=$(".img_bor .div_six").offset().top;
+			if (div_one==(-460)) {
+				$(".img_bor .div_one").stop().css({"top":"2300px"});
+				div_one=$(".img_bor .div_one").offset().top;
+			} 
+			if (div_two==(-460)) {
+				$(".img_bor .div_two").stop().css({"top":"2300px"});
+				div_two=$(".img_bor .div_two").offset().top;
+			} 
+			if (div_three==(-460)) {
+				$(".img_bor .div_three").stop().css({"top":"2300px"});
+				div_three=$(".img_bor .div_three").offset().top;
+			}
+			if (div_four==(-460)) {
+				$(".img_bor .div_four").stop().css({"top":"2300px"});
+				div_four=$(".img_bor .div_four").offset().top;
+			}  
+			if (div_five==(-460)) {
+				$(".img_bor .div_five").stop().css({"top":"2300px"});
+				div_five=$(".img_bor .div_five").offset().top;
+			} 
+			if (div_six==(-460)) {
+				$(".img_bor .div_six").stop().css({"top":"2300px"});
+				div_six=$(".img_bor .div_six").offset().top;
+			} 	
+		}
+		timers=setInterval(hidden,2000);
+
+		$(".img_bor").mouseover(function(event) {
+			clearInterval(timers);
+		})
+		$(".img_bor").mouseout(function(event) {
+			timers=setInterval(hidden,2000);
+		})
+		// var a;
+		// var i=0;
+		// $(".but_bor ul li").stop().eq(i).css("opacity",1).siblings().css("opacity",0.4);
+		// function hidden(){
+		// 	$(".img_bor div").stop();
+			
+		// 	if(i==12){
+		// 		i=0;
+		// 	}
+		// 	a=i*(-460);
+		// 	if(i<7){
+		// 		$(".img_bor").stop().animate({"top":a+'px'},500);
+		// 		$(".img_bor_two").stop().animate({"top":a+2760+'px'},500);
+		// 		$(".but_bor_two").stop().eq(i).css("z-index","5");
+		// 	}
+		// 	if(i>=7){
+		// 		$(".img_bor").stop().animate({"top":a+2760+2760+'px'},500);
+		// 		$(".img_bor_two").stop().animate({"top":a+2760+'px'},500);
+		// 		$(".but_bor_two").stop().eq(i).css("z-index","-5");
+		// 	}	
+		// 	$(".but_bor ul li").stop().eq(i).css("opacity",1).siblings().css("opacity",0.4);
+		// 	i++;
+		// }
+		// var timers=setInterval(hidden,2000);
+		// $(".img_bor").mouseover(function(){
+		// 	clearInterval(timers);
+		// })
+		// $(".img_bor").mouseout(function(event) {
+		// 	timers=setInterval(hidden,2000);
+		// })
+		// $(".but_bor ul li").mouseover(function(event) {
+		// 	i=$(this).index();
+		// 	a=i*(-460);
+		// 	$(".img_bor").stop().animate({"top":a+'px'},500);
+		// 	$(".img_bor_two").stop().animate({"top":a+2760+'px'},500);
+		// 	$(".but_bor ul li").stop().eq(i).css("opacity",1).siblings().css("opacity",0.4);
+		// 	clearInterval(timers);
+		// })
+		// $(".but_bor ul li").mouseout(function(event) {
+		// 	timers=setInterval(hidden,2000);
+		// })
+	})
+</script>
+</head>
+
+<body>
+<div class="bor">
+	<div class="img_bor" style="left:0px;top:0px">
+		<div class="div_one" style="left:0px; top:0px;"><a href=""><img src="./images/p1.jpeg" alt="" /></a></div>
+		<div class="div_two" style="left:0px; top:460px;"><a href=""><img src="./images/p2.jpeg" alt="" /></a></div>
+		<div class="div_three" style="left:0px; top:920px;"><a href=""><img src="./images/p3.jpeg" alt="" /></a></div>
+		<div class="div_four" style="left:0px; top:1380px;"><a href=""><img src="./images/p4.jpeg" alt="" /></a></div>
+		<div class="div_five" style="left:0px; top:1840px;"><a href=""><img src="./images/p5.jpeg" alt="" /></a></div>
+		<div class="div_six" style="left:0px; top:2300px;"><a href=""><img src="./images/p6.jpeg" alt="" /></a></div>
+	</div>
+	<div class="but_bor">
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#box{
+		width: 700px;
+		height: 400px;
+		border: 2px solid blue;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+$(function(){
+
+	$('#btn').click(function() {
+		// 将h1插入到#box里面
+		// $('#box').append($('h1'))
+
+		// 向#box中追加新建元素
+		// $('#box').append('<h2>我是新创建的！！！！！</h2>');
+		
+		// 想元素内部（前面）插入新元素
+		// $('#box').prepend($('h1'));
+
+
+		// $('#box h2').eq(1).after($('h1'));
+
+		// 清空box
+		// $('#box').empty();
+
+		// 删除box
+		// $('#box').remove();
+
+
+		// 复制元素
+		var newH = $('h1').clone();
+		$('#box').append(newH);
+	});
+	
+})
+
+
+</script>
+</head>
+
+<body>
+
+
+<input type="button" value="点我啊" id="btn" />
+
+<h1>我是h1标签</h1>
+<div id="box">
+	<h2>我们是h2标签0</h2>
+	<h2>我们是h2标签1</h2>
+	<h2>我们是h2标签2</h2>
+	<h2>我们是h2标签3</h2>
+</div>
+
+
+
+
+</body>
+</html>

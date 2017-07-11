@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.zhu{
+		width: 800px;
+		height: 400px;
+		position: relative;
+	}
+	.divone{
+		width: 400px;
+		height: 400px;
+		background: url(./images/400.jpg) 0px 0px;
+		float: left;
+	}
+	.divtwo{
+		width: 400px;
+		height: 400px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+	}
+	.divtwo img{
+		position: absolute;
+	}
+	.fangda{
+		width: 200px;
+		height: 200px;
+		background-color: white;
+		opacity: 0.6;
+		position: absolute;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload=function(){
+		divone=document.getElementById("divone");
+		fangda=document.getElementById("fangda-id");
+		divtwo=document.getElementById("img_big");
+		divone.onmousemove=function(e){
+			var ev=window.event||e;	//抓取事件源。使IE与其它浏览器兼容。
+			var x=ev.clientX;
+			var y=ev.clientY;
+			if (x>300) {
+				fangda.style.left=200+'px';
+			}
+			else if (x<100) {
+				fangda.style.left=0+'px';
+			}
+			else{
+				fangda.style.left=x-100+'px';
+				divtwo.style.left=2*(-x+100)+'px';
+			}
+			if (y>300) {
+				fangda.style.top=200+'px';
+			}
+			else if (y<100) {
+				fangda.style.top=0+'px';
+			}
+			else{
+				fangda.style.top=y-100+'px';
+				divtwo.style.top=2*(-y+100)+'px';
+			}
+			
+			
+		}
+		divone.onmouseover=function() {
+			fangda.style.display='block';
+			divtwo.style.display='block';
+		}
+		divone.onmouseout=function() {
+			fangda.style.display='none';
+			divtwo.style.display='none';
+		}
+	}
+</script>
+
+<body>
+
+<div class="zhu">
+	<div class="divone" id="divone">
+		<div class="fangda" id="fangda-id" style="left:0px; top:0px;display:none;"></div>
+	</div>	
+	
+	<div class="divtwo"><img src="./images/800.jpg" alt="" style="left: 0px;top: 0px; display:none" id="img_big" /></div>
+</div>
+
+</body>
+</html>

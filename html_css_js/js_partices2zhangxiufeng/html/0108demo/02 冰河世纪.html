@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	window.onload = function(){
+
+		var n = 1;
+		var pic = document.getElementById('pic');
+
+
+		// 设立定时器，每隔100毫秒换一张图片
+		setInterval(function(){
+			n++;
+			if(n==20){
+				n=1;
+			}
+			// 组合新路径
+			var src = "images/"+n+".Png";
+			// 将新路径设置回去
+			pic.setAttribute('src',src);
+		},100)
+
+
+	}
+</script>
+</head>
+
+<body>
+
+<img src="images/1.Png" id="pic" />
+
+
+</body>
+</html>

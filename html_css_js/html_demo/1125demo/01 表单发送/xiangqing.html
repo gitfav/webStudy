@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<h1>后盾网单身男女相亲大会报名表</h1>
+
+<!-- 表单发送的数据实际是标签的value属性值 -->
+
+<form action="xq.php" method="post">
+	姓名：
+	<input type="text" name="username" value="默认姓名" />
+	<br /><br />
+
+	密码：<input type="password" name="pwd" value="123456" />
+	<br /><br />
+	
+	<!-- 同一组单选按钮的name值要保持一致 -->
+	<!-- 默认选中单选或多选按钮用的是 checked='checked'属性 -->
+	性别：
+	男<input type="radio" name="sex" value="1" />
+	女<input type="radio" name="sex" value="0" checked="checked" />
+	<br />
+	<br />
+	
+	
+	<!-- 同一组多选按钮的name值要保持一致，name属性值后面要加中括号 -->
+	家庭条件：
+	有车有房 <input type="checkbox" name="family[]" value="fangche" checked="checked" />
+	老爹当官 <input type="checkbox" name="family[]" value="dangguan" />
+	良田百亩 <input type="checkbox" name="family[]" value="liangtian" checked="checked" />
+	欠债百万 <input type="checkbox" name="family[]" value="qianzhai" />
+	<br /><br />
+
+	<!-- 默认选中option用的是selected='selected'属性 -->
+	学历：
+	<select name="edu" size="5" multiple="multiple">
+		<option value="xiaoxue">小学</option>
+		<option value="chuzhong">初中</option>
+		<option value="gaozhong">高中</option>
+		<option value="dazhuan" selected="selected">大专</option>
+		<option value="benke">本科</option>
+		<option value="shuoshi">硕士</option>
+		<option value="boshi">博士</option>
+		<option value="shengdoushi">圣斗士</option>
+		<option value="lieshi">烈士</option>
+	</select>
+	<br /><br />
+
+	靓照： <input type="file" />
+	<br /><br />
+
+	自我介绍：<textarea name="introduction">这家伙很懒，什么都没写！能找到对象才怪呢！</textarea>
+	<br /><br />
+
+	<input type="submit" value="快给我注册，我要找对象！" />
+	<input type="reset" value="哎呀，写错了！重写！" />
+
+	
+</form>
+
+
+
+
+</body>
+</html>

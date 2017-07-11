@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+
+</head>
+<style type="text/css">
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.d1{
+	width: 200px;
+	height: 100px;
+}
+.d1 .d2
+{
+width:100px;
+height:100px;
+background:yellow;
+transition:width 0.2s;
+-moz-transition:width 0.2s; /* Firefox 4 */
+-webkit-transition:width 0.2s; /* Safari and Chrome */
+-o-transition:width 0.2s; /* Opera */
+}
+
+.d1:hover .d2	                                         /*在移动其它位置上进行动画*/
+{
+	width:1000px;
+}
+
+
+.d3{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 100px;
+	left: 20px;	
+	background:url(./image/link.jpg) no-repeat  2px 2px;
+}
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		function main(){
+			var d3=document.getElementById('d3');
+			if(d3.style.display=='none'){
+				d3.style.display='block';
+			}
+			else{
+				d3.style.display='none'
+			}
+		}
+		document.getElementById('d1').onmouseover=main;
+		document.getElementById('d1').onmouseout=main;
+		
+	}
+</script>
+<body>
+<div id="d1" class="d1">
+	<div class="d2"></div>
+</div>
+<p>请把鼠标指针放到黄色的 div 元素上，来查看过渡效果。</p>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+<div id="d3" class="d3" style="display:none">
+	
+</div>
+
+</body>
+</html>

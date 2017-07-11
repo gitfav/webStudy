@@ -1,0 +1,17 @@
+在生成ssh的的文件夹中加入 config 文件
+内容如下
+
+# Default github user(first@mail.com),注意User项直接填git，不用填在github的用户名
+Host github.com
+ HostName github.com
+ User wangrjmailbox@126.com
+ IdentityFile ~/.ssh/id_rsa_github
+
+# second user(second@mail.com)
+# 建一个gitlab别名，新建的帐号使用这个别名做克隆和更新
+Host mobogit
+ HostName mobogit
+ User wangrenjie@mobochina.com
+ IdentityFile ~/.ssh/id_rsa
+
+git会根据host 来判断用那个ssh密钥

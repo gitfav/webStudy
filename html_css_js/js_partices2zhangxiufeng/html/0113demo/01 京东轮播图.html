@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#jd{
+		width: 550px;
+		height: 240px;
+		border: 4px solid blue;
+		margin: 20px auto;
+		position: relative;
+	}
+	#jd img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	#jd ul{
+		position: absolute;
+		right: 11px;
+		top: 211px;
+	}
+	#jd ul li{
+		list-style: none;
+		width: 22px;
+		height: 22px;
+		background: #999;
+		float: left;
+		margin-left: 5px;
+		border-radius: 50%;
+		line-height: 22px;
+		text-align: center;
+		font-size: 12px;
+		color: white;
+		font-family: Arial,Verdana,"宋体";
+
+	}
+</style>
+<script type="text/javascript">
+	
+window.onload = function(){
+	// 抓元素
+	var jd = document.getElementById('jd');
+	var imgs = jd.getElementsByTagName('img');
+	var lis = jd.getElementsByTagName('li');
+
+	var c = 0;
+
+	function run(){
+		c++;
+		c = (c==6)?0:c;
+		// 先让所有的图片隐藏，所有li变灰
+		for(var i=0;i<6;i++){
+			imgs[i].style.display = 'none';
+			lis[i].style.background = '#999';
+		}
+		// 让c号图片显示，c号li变红
+		imgs[c].style.display = 'block';
+		lis[c].style.background = '#E4393C';
+	}
+	// 设置定时器，控制自动切换
+	var timer = setInterval(run,1000);
+
+	// 给li加鼠标移入事件
+	for(var i=0;i<6;i++){
+		// 给li加属性，用来记录序号
+		lis[i].xuhao = i;
+
+		// 不论用什么方式去控制效果的变化，都要通过同一个变量去控制
+		lis[i].onmouseover = function(){
+			// 清理定时器
+			clearInterval(timer);
+			c = this.xuhao;
+			// 先让所有的图片隐藏，所有li变灰
+			for(var i=0;i<6;i++){
+				imgs[i].style.display = 'none';
+				lis[i].style.background = '#999';
+			}
+			// 让c号图片显示，c号li变红
+			imgs[c].style.display = 'block';
+			lis[c].style.background = '#E4393C';
+		}
+
+		// 给li加移出事件
+		lis[i].onmouseout = function(){
+			// 恢复定时器
+			timer = setInterval(run,1000);
+		}
+	}
+}
+
+</script>
+</head>
+
+<body>
+
+	
+	<div id="jd">
+		<!-- img[src=images/$.jpg]*6 -->
+		<img src="images/1.jpg" style="display:block;" />
+		<img src="images/2.jpg" alt="" />
+		<img src="images/3.jpg" alt="" />
+		<img src="images/4.jpg" alt="" />
+		<img src="images/5.jpg" alt="" />
+		<img src="images/6.jpg" alt="" />
+		<ul>
+			<li style="background:#E4393C;">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>

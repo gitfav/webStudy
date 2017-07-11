@@ -1,0 +1,815 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+img {
+	border: 0px;
+}
+
+/*>head<*/
+div.top{
+	width: 100%;
+	height: 60px;
+}
+
+div.top div.center{
+	margin: auto;
+	width: 1180px;
+	height: 60px;
+}
+
+div.top div.center div.logo{
+	width: 102px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+}
+
+div.top div.center div.links{
+	width: 1027px;
+	height: 60px;
+	position: relative;
+	left: 102px;
+	padding-left: 50px;
+}
+
+div.top div.center div.links .list{
+	width: 652px;
+	height: 60px;
+	list-style: none;
+	float: left;
+	line-height: 60px;
+}
+
+div.top div.center div.links .list li{
+	float: left;
+	display: inline;
+}
+
+div.top div.center div.links .list li a.all{
+	text-decoration: none;
+	font-size: 16px;
+	padding: 20px 15px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(102,102,102);
+}
+
+div.top div.center div.links .list li a.all:hover{
+	background-color: rgb(201,0,1);
+	color: white;
+}
+
+div.top div.center div.links .list li a.shouye{
+	font-size: 16px;
+	padding: 20px 15px;
+	text-decoration: none;
+	background-color: rgb(201,0,1);
+	color: white;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+
+div.top div.center div.links .list li form{
+	padding-top: 22px;
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+div.top div.center div.links .list li a.sousuo{
+	font-size: 16px;
+	text-decoration: none;
+	color: rgb(102,102,102);
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	padding: 10px 4px;
+}
+
+div.top div.center div.links .list li a.sousuo:hover{
+	text-decoration: underline;
+}
+
+div.top div.center div.links ul.linkstwo{
+	float: right;
+	height: 40px;
+	width: 187px;
+	list-style: none;
+	display: inline;
+	padding-top: 20px;
+	padding-right: 20px;
+	position: relative;
+}
+
+div.top div.center div.links ul.linkstwo li.zhuce{
+	float: right;
+	width: 54px;
+	height: 18px;
+	
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	padding: 3px 8px;
+	background-color: #464646;
+	border: 1px solid #464646;
+	border-radius: 2px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+.top .center .links .linkstwo .zhuce a{
+	color: rgb(255,255,255);
+	text-decoration: none;
+
+}
+
+div.top div.center div.links ul.linkstwo li.denglu{
+	float: right;
+	width: 34px;
+	height: 18px;
+	font-size: 14px;
+	font-weight: 700;
+	display: inline;
+	text-align: center;
+	padding: 3px 8px;
+	border: 1px solid #fff;
+	left: -10px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+div.top div.center div.links ul.linkstwo li.denglu a{
+	color: rgb(102,102,102);
+	text-decoration: none;
+
+}
+
+div.top div.center div.links ul.linkstwo .dianhua{
+	text-decoration: none;
+	display: inline;
+	width: 13px;
+	height: 23px;
+	text-align: center;
+	padding: 3px 8px;
+	position: absolute;
+	top: 18px;
+	left:25px;
+	background: url(../images/work_tool_001.png) 0px -333px no-repeat;
+}
+/*>head<*/
+
+
+/*body*/
+div.middle{
+	width: 100%;
+	height: 3747px;
+	background-color: rgb(240,240,240);
+}
+
+div.middle div.space{
+	margin: auto;
+	width: 1180px;
+	height: 18px;
+}
+div.middle div.center{
+	margin: auto;
+	width: 1180px;
+	height: 464px;
+}
+div.middle div.center div.left{
+	float: left;
+	width: 780px;
+	height: 464px;
+}
+
+div.middle div.center div.left div.imageslinks{
+	width: 780px;
+	height: 80px;
+	position: absolute;
+	top: 471px;
+	left: 84.5px;
+	z-index: 1;
+}
+
+div.middle div.center div.left div.imageslinks ul{
+	float: left;
+	display: inline;
+}
+
+div.middle div.center div.left div.imageslinks ul li{
+	list-style: none;
+	float: left;
+	display: inline;
+}
+
+div.middle div.center div.left div.imageslinks ul li a.linkfirst{
+	display: block;
+	width: 60px;
+	height: 70px;
+	background-color: rgb(50,50,50);
+}
+
+div.middle div.center div.left div.imageslinks ul li a.linklast{
+	display: block;
+	width: 60px;
+	height: 70px;
+	background-color: rgb(50,50,50);
+}
+
+div.middle div.center div.left div.imageslinks ul li a.linktwo{
+	display: block;
+	width: 100px;
+	height: 60px;
+	border:5px solid rgb(50,50,50);
+}
+
+div.middle div.center div.right{
+	float: left;
+	width: 380px;
+	height: 465px;
+	margin-left: 20px;
+	display: inline;
+}
+
+div.middle div.center div.right div.first,div.twice,div.third,div.fourth{
+	width: 358px;
+	height: 90px;
+	border-top: 1px solid rgb(200,200,200);
+	border-left: 1px solid rgb(200,200,200);
+	border-right: 1px solid rgb(200,200,200);  
+	background-color: rgb(255,255,255);
+	padding: 20px 10px 5px 10px;
+}
+
+div.middle div.center div.right div.first h4 a{
+	text-decoration: none;
+	font-size: 18px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-weight: 100;
+	color: rgb(0,0,0);
+}
+
+div.middle div.center div.right div.first p{
+	height: 60px;
+	padding-top: 5px;	
+	font-size: 13px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+div.middle div.center div.right div.first p img{
+	padding-right: 10px;
+}
+
+div.middle div.center div.right div.twice h4 a{
+	text-decoration: none;
+	font-size: 18px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-weight: 100;
+	color: rgb(0,0,0);
+}
+
+div.middle div.center div.right div.twice p{
+	height: 58px;
+	padding-top: 5px;	
+	font-size: 13px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+div.middle div.center div.right div.twice p img{
+	padding-right: 10px;
+}
+
+div.middle div.center div.right div.third h4 a{
+	text-decoration: none;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 18px;
+	font-weight: 100;
+	color: rgb(0,0,0);
+}
+
+div.middle div.center div.right div.third p{
+	height: 58px;
+	padding-top: 5px;
+	font-size: 13px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+
+div.middle div.center div.right div.third p img{
+	padding-right: 10px;
+}
+
+div.middle div.center div.right div.fourth p a{
+	text-decoration: none;
+	font-family:  "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 14px;
+	display: block;
+	height: 22px;
+	color: rgb(0,0,0);
+}
+
+div.middle div.center div.right div.fourth{
+	border-bottom: 1px solid rgb(200,200,200);
+	box-shadow: 0px 1px 0px rgb(180,180,180)
+}
+
+div.middle div.center div.right div.first h4 a:hover,a:active{
+	color: red;
+	outline: none;
+}
+div.middle div.center div.right div.twice h4 a:hover,a:active{
+	color: red;
+	outline: none;
+}
+div.middle div.center div.right div.third h4 a:hover,a:active{
+	color: red;
+	outline: none;
+}
+div.middle div.center div.right div.fourth p a:hover,a:active{
+	color: red;
+	outline: none;
+}
+
+div.middle div.space-two{
+	width: 1180px;
+	height: 20px;
+	margin: auto;
+}
+
+div.middle div.center-two{
+	width: 1180px;
+	height: 320px;
+	margin: auto;
+	position: relative;
+}
+
+div.middle div.center-two a.c-one,a.c-two,a.c-three{
+	float: left;
+	display: block;
+	width: 380px;
+	height: 280px;
+}
+
+div.middle div.center-two a.c-one,a.c-two{
+	padding-right: 20px!important;
+	padding-right: 18px;
+}
+
+div.middle div.center-text{
+	width: 1180px;
+	height: 45px;
+	margin: auto;
+}
+
+div.middle div.center-text div.textone{
+	float: left;
+	width: 48px;
+	height: 45px
+}
+
+div.middle div.center-text div.textone a{
+	text-decoration: none;
+	font-size: 24px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(0,0,0);
+}
+
+div.middle div.center-text div.textone a:hover,a:active{
+	outline: none;
+	color: rgb(100,100,100);
+}
+
+div.middle div.center-text div.texttwo{
+	float: right;
+	line-height: 45px;
+}
+
+div.middle div.center-text div.texttwo ul{
+	float: right;
+}
+
+div.middle div.center-text div.texttwo ul li{
+	float: right;
+	list-style: none;
+	height: 45px;
+}
+
+div.middle div.center-text div.texttwo ul li a{
+	text-decoration: none;
+	color: rgb(100,100,100);
+	padding: 0px 6px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 16px;
+}
+
+div.middle div.center-text div.texttwo ul li a:hover,a:active{
+	outline: none;
+	text-decoration: underline;
+	color: rgb(0,0,0);
+}
+
+/*灵感*/
+
+div.middle div.center-linggang{
+	width: 1180px;
+	height: 834px;
+	margin: auto;
+}
+
+div.middle div div.above{
+	width: 1180px;
+	height: 397px;
+	padding-bottom: 20px;
+	margin:auto;
+}
+
+div.middle div div.above div.lfirst{
+	width: 380px;
+	height:397px;
+	float: left;
+	background-color: rgb(255,255,255);
+	position: relative;
+}
+
+div.middle div div.above div.lfirst .shang-tu{
+	display: block;
+	float: left;
+	width: 380px;
+	height: 280px;
+}
+
+div.middle div div.above div.lfirst a.lfirst-zuoshang-qita{
+	z-index: 1;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 10px;
+	background-color: rgb(107,201,174);
+	font-size: 14px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(255,255,255);
+	text-decoration: none;
+}
+
+div.middle div div.above div.lfirst div.leftp{
+	clear: both;
+	width: 358px;
+	height: 55px;
+	padding:10px;
+	border:1px solid rgb(200,200,200);
+}
+div.middle div div.above div.lfirst div.leftp h5 a{
+	text-decoration: none;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 14px;
+	color: rgb(180,180,180);
+}
+div.middle div div.above div.lfirst div.leftp h5 a:hover,a:active{
+	color: rgb(100,100,100);
+	outline: none;
+}
+div.middle div div.above div.lfirst div.leftp div.leftt{
+	padding-top: 10px;
+	width: 358px;
+	height: 35px;
+	line-height: 35px;
+	position: relative;
+}
+div.middle div div.above div.lfirst div.leftp div.leftt a.t-one,a.b-one{
+	float: left;
+}
+div.middle div div.above div.lfirst div.leftp div.leftt a.t-one{
+	float: left;
+	text-decoration: none;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 14px;
+	color: rgb(100,100,100);
+	padding-left: 10px;
+}
+div.middle div div.above div.lfirst div.leftp div.leftt a.t-one:hover,a.t-one:active{
+	text-decoration: underline;
+	outline: none;
+}
+div.middle div div.above div.lfirst div.leftp div.leftt span.t-two{
+	float: right;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 14px;
+	color: rgb(180,180,180);
+}
+div.middle div div.above div.lfirst div.pinlun{
+	width: 378px;
+	background-color: rgb(250,250,250);
+	height: 38px;
+	border-left: 1px solid rgb(200,200,200);
+	border-right: 1px solid rgb(200,200,200);
+	border-bottom: 2px solid rgb(200,200,200);
+	position: relative;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns{
+	color: rgb(150,150,150);
+	line-height: 38px;
+	float: right;
+	padding-right: 10px;
+	width: 164px;
+	height: 38px;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns .pinlun-biaoqian-one,.pinlun-biaoqian-two,.pinlun-biaoqian-three,.pinlun-biaoqian-four{
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	padding-right: 8px;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns .pinlun-biaoqian-one{
+	background:url(../images/work_tool_001.png) -338px 5px;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns .pinlun-biaoqian-two{
+	background:url(../images/work_tool_001.png) -363px 5px;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns .pinlun-biaoqian-three{
+	background:url(../images/work_tool_001.png) -295px -21px;
+}
+
+div.middle div div.above div.lfirst div.pinlun div.pinluns .pinlun-biaoqian-four{
+	background:url(../images/work_tool_001.png) -332px -21px;
+}
+
+div.middle div div.above div.jiange{
+	float: left;
+	width: 20px;
+	height: 397px;
+}
+
+div.middle div.yuanchang{
+	width: 1180px;
+	height: 1251px;
+	margin:auto;
+}
+
+div.middle div.text-tuijian{
+	width: 1180px;
+	height: 45px;
+	margin: auto;
+}
+
+div.middle div.text-tuijian div.textone{
+	float: left;
+	width: 120px;
+	height: 45px;
+	text-decoration: none;
+	font-size: 24px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(0,0,0);
+}
+
+div.middle div.text-tuijian div.texttwo{
+	float: right;
+	width: 200px;
+	height: 45px;
+}
+
+div.middle div.text-tuijian div.texttwo a{
+	float: right;
+	font-size: 14px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(100,100,100); 
+	text-decoration: none;
+}
+
+div.middle div.text-tuijian div.texttwo a:hover,a:active{
+	outline: none;
+	color: rgb(0,0,0);
+}
+
+
+/*推荐样式表*/
+
+.middle .tuijian{
+	margin: auto;
+	width: 1180px;
+	height: 426px;
+}
+
+.middle .tuijian .waikuang{
+	width: 1180px;
+	height: 193px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.middle .tuijian .waikuang .space-four{
+	width: 20px;
+	height: 212px;
+	float: left;
+}
+
+.middle .tuijian .waikuang .neikuang{
+	width: 548px;
+	height: 160px;
+	float: left;
+	padding: 15px;
+	display: inline;
+	background-color: rgb(255,255,255);
+	border-left:1px solid rgb(200,200,200);
+	border-bottom: 2px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	border-right:1px solid rgb(200,200,200);
+	position: relative;
+}
+
+/*上面作者和评论*/
+
+.middle .tuijian .waikuang .neikuang .top{
+	width: 548px;
+	height: 50px;
+	padding-bottom: 10px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-tu{
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+.middle .tuijian .waikuang .neikuang .top .top-one{
+	float: left;
+	padding-left: 10px;
+	width: 224px;
+	height:50px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-one h4{
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 16px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-one span{
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 14px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-two{
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	padding-left: 10px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-two p{
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 15px;
+	font-weight: 700;
+}
+.middle .tuijian .waikuang .neikuang .top .top-two label{
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	font-size: 15px;
+	display: block;
+	text-align: center;
+	font-weight: 700;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-three{
+	float: right;
+	height: 30px;
+	width: 68px;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-three a{
+	font-size: 14px;
+	padding:5px 20px;
+	display: block;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	text-decoration: none;
+	background-color: rgb(80,80,80);
+	color: rgb(255,255,255);
+	border-radius: 3px;
+	font-weight: 700;
+}
+
+.middle .tuijian .waikuang .neikuang .top .top-three a:hover{
+	box-shadow: 0px 1px 2px #888888;
+	background-color: rgb(50,50,50);
+}
+
+
+/*下面的图片*/
+
+.middle .tuijian .waikuang .neikuang .xiamian{
+	width: 548px;
+	height: 100px;
+	position: relative;
+}
+
+.middle .tuijian .waikuang .neikuang .xiamian .zuo-three{
+	float: left;
+	width: 423px;
+	height: 100px;
+}
+
+.middle .tuijian .waikuang .neikuang .xiamian .zuo-three a{
+	float: left;
+	margin-right: 16px;
+}
+
+.middle .tuijian .waikuang .neikuang .xiamian .you-one{
+	float: left;
+}
+.middle .tuijian .waikuang .neikuang .xiamian .you-one a{
+	float: left;
+}
+
+/*品牌*/
+
+.middle .pinpai{
+	width: 1180px;
+	height: 184px;
+	margin: auto;
+	position: relative;
+	padding-bottom: 50px;
+}
+
+.middle .pinpai ul{
+	list-style: none;
+}
+
+.middle .pinpai ul li{
+	float: left;
+	border: 1px solid rgb(200,200,200);
+	margin-right: 14px;
+	margin-bottom: 10px;
+	display: block;
+	height: 80px;
+	width: 180px;
+}
+
+/*低端*/
+
+.bottoms{
+	width: 100%;
+	height:375px;
+}
+
+.bottoms .shang{
+	width: 1180px;
+	height: 170px;
+	margin: auto;
+	padding: 60px 0px 0px 0px;
+	border-bottom: 1px solid #888888;
+	position: relative;
+}
+
+.bottoms .shang ul{
+	display: inline;
+	list-style: none;
+	float: left;
+	width: 196px;
+}
+
+.bottoms .shang ul li a{
+	font-size: 14px;
+	text-decoration: none;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+	color: rgb(100,100,100);
+}
+
+
+.bottoms .shang ul li a:hover{
+	outline: none;
+	text-decoration: underline;
+	color: rgb(50,50,50);
+}
+
+.bottoms .shang ul li h4{
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}
+
+.bottoms .shang ul li a span.one{
+	display: block;
+	width: 83px;
+	height: 22px;
+	margin-top: 10px;
+	background: url(../images/work_tool_001.png) 0px -561px no-repeat;
+}
+.bottoms .shang ul li a span.two{
+	display: block;
+	width: 83px;
+	height: 22px;
+	margin-top: 10px;
+	background: url(../images/work_tool_001.png) 0px -585px no-repeat;
+}
+.bottoms .shang ul li a span.three{
+	display: block;
+	width: 103px;
+	height: 22px;
+	margin-top: 10px;
+	background: url(../images/work_tool_001.png) 0px -608px no-repeat;
+}
+
+.bottoms .xia{
+	width: 1180px;
+	height: 144px;
+	margin: auto;
+}
+
+.bottoms .xia p{
+	padding: 5px 0px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "MicrosoftYaHei","微软雅黑","华文细黑","STHeiti";
+}

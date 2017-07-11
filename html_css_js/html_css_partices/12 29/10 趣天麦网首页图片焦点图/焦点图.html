@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<style type="text/css">
+*{
+	padding:0px;
+	margin: 0px;
+}
+img{
+	border: 0px;
+	float: left;
+}
+#d1{
+	margin: auto;
+	width: 976px;
+	height: 296px;
+	border: solid 3px red;
+}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		$("#d1 img").mousemove(function(){
+			$(this).fadeTo(0,1);
+			$(this).siblings().fadeTo(0,0.7);
+		});
+		$("#d1").mouseout(function(){
+			$("#d1 img").fadeTo(0,1);
+		});
+	})
+</script>
+</head>
+
+<body>
+<div id="d1">
+	<img src="images/1.jpg" alt="" />
+	<img src="images/2.jpg" alt="" />
+	<img src="images/3.jpg" alt="" />
+	<img src="images/4.jpg" alt="" />
+	<img src="images/5.jpg" alt="" />
+</div>
+</body>
+</html>

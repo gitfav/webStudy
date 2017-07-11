@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript">
+
+	var shuiguo = ['苹果','橘子','香蕉','梨','西瓜','椰子'];
+
+	// alert(shuiguo.constructor);
+	document.write(shuiguo+'<br />');
+	// shuiguo[shuiguo.length] = '榴莲';				///////shuiguo.push();向数组后面追加元素
+	// 向数组后面追加元素
+	// shuiguo.push('榴莲','火龙果');
+	// alert(shuiguo);
+
+
+	// 向数组开头追加元素								/////shuiguo.unshift();向数组开头追加元素
+	// shuiguo.unshift('火龙果','榴莲');
+
+	// 删除数组的最后一个元素							////shuiguo.pop();删除最后一个元素
+	// shuiguo.pop();
+
+	
+
+	// 删除数组的第一个元素								//////shuoguo.shift();删除第一个元素
+	// shuiguo.shift();
+
+	// 万能添加删除										///////////万能添加删除
+	// shuiguo.splice(3,2,'火龙果','榴莲','猕猴桃');
+	// shuiguo.splice(1,2);
+	// shuiguo.splice(6,0,'火龙果','榴莲');////////////插入元素 插在前面
+	// shuiguo.splice(2,1,'火龙果','榴莲');
+	// document.write(shuiguo);
+
+	// 将数组转成字符串
+	// var re = shuiguo.join(',,'); 				/////shuiguo.join();默认为逗号
+
+	// 截取数组中的元素 					////////////数组的截取 包含开始，不包含结束
+
+	// var re = shuiguo.slice(2,4);   /////////截取下标是2，3的元素
+	// var re = shuiguo.slice(3, 5);  /////////截取下标是3，4的元素
+	// var re = shuiguo.slice(-4, -1);/////截取下标是-1，-2，-3的元素
+	// document.write(re);
+
+
+	// 数组的连接
+	var jingdian = ['故宫','天坛','颐和园','鸟巢'];
+	var re = jingdian.concat(shuiguo);							/////连接其他数组
+	document.write(re);
+
+</script>
+
+
+</head>
+
+<body>
+</body>
+</html>

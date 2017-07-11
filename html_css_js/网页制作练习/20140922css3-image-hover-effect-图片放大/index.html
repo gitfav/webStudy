@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CSS3鼠标滑过图片放大特效DEMO演示</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*font: 14px/1 Lato, sans-serif;*/
+  color: #555;
+  background: #eee;
+}
+
+.gallery {
+  width: 790px;
+  margin: 30px auto;
+  padding: 5px;
+  background: #333;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  width: 250px;
+  transition: 0.1s transform;
+  transform: translateZ(0);
+  /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.5, 1.5);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div class="gallery cf">
+  <div>
+    <img src="landscape-test-1_1x.jpg" />
+  </div>
+  <div>
+    <img src="iceberg_1x.jpg" />
+  </div>
+  <div>
+    <img src="igloo-800_1x.jpg" />
+  </div>
+  <div>
+    <img src="trees_1x.jpg" />
+  </div>
+  <div>
+    <img src="space_1x.jpg" />
+  </div>
+  <div>
+    <img src="render1_1x.jpg" />
+  </div>
+</div>
+
+</body>
+
+</html>

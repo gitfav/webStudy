@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.tab{
+		width: 600px;
+		height: 500px;
+		border: 3px solid blue;
+		/*margin: 10px auto;*/
+		margin:10px;
+		float: left;
+		position: relative;
+	}
+	.tab ul li{
+		float: left;
+		list-style: none;
+		width: 200px;
+		height: 50px;
+		font-size: 20px;
+		font-family: 微软雅黑;
+		line-height: 50px;
+		text-align: center;
+		color: white;
+		font-weight: 700;
+	}
+	.tab .con{
+		width: 580px;
+		height: 420px;
+		position: absolute;
+		left: 10px;
+		top: 70px;
+		display: none;
+	}
+	.tab .box{
+		width: 200px;
+		height: 10px;
+		background: blue;
+		position: absolute;
+		top: 55px;
+		left: 0;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		// 没有定时器效果的代码复用：用过关系去找元素
+
+		// 给li加鼠标移入事件
+		$('.tab ul li').mouseover(function() {
+			// 获得当前移入的li的序号
+			var cur = $(this).index();
+			// 让cur对应的con区域显示，其他的隐藏
+			$(this).parents('.tab').find('.con').eq(cur).show().siblings('.con').hide();
+
+			// 计算小滑块应该到达的位置的left值
+			var left = cur*200;
+			// 让小滑块滑到对应的位置
+			$(this).parents('.tab').find('.box').stop().animate({'left':left+'px'}, 300);
+		});
+	})
+	
+
+</script>
+</head>
+
+<body>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+<div class="tab">
+	<ul>
+		<li style="background:#22B14C;">新闻</li>
+		<li style="background:#00A2E8;">娱乐</li>
+		<li style="background:#A349A4;">体育</li>
+	</ul>
+
+	<div class="con" style="background:#22B14C;display:block;">新闻</div>
+	<div class="con" style="background:#00A2E8;">娱乐</div>
+	<div class="con" style="background:#A349A4;">体育</div>
+	<div class="box"></div>
+</div>
+
+
+
+
+</body>
+</html>

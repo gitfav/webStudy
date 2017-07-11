@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#box{
+		width: 400px;
+		border: 5px solid blue;
+		margin: 0px auto;
+		padding: 40px;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 计算元素的margin-top值
+		// （可视区域高度-元素高度）/2
+		var mt = ($(window).height()-$('#box').outerHeight())/2;
+		// 将计算出来的margin-top值赋值回去
+		$('#box').css('margin-top', mt+'px');
+
+		// 给窗口加大小变化事件
+		$(window).resize(function(){
+			// 计算元素的margin-top值
+			// （可视区域高度-元素高度）/2
+			var mt = ($(window).height()-$('#box').outerHeight())/2;
+			// 将计算出来的margin-top值赋值回去
+			$('#box').css('margin-top', mt+'px');	
+		})
+	})
+</script>
+</head>
+
+<body>
+
+
+<div id="box">原南京市长季建业受贿案今日将在山东烟台中院公开开庭审理。2013年10月，季建业被调查，成为十八大后江苏落马的首位省部级官员。此外，随着今年原南京市委书记杨卫泽的落马，南京成十八大后第一个书记、市长均落马的省会城市。
+
+季建业成十八大后江苏落马“首虎”
+
+2013年10月17日，中央纪委监察部网站发布消息称，江苏省南京市委副书记、市长季建业涉嫌严重违纪违法，接受组织调查。
+
+2014年1月30日，中央纪委对季建业严重违纪违法问题进行了立案检查。经查，季建业利用职务上的便利为他人谋取利益，本人或通过其亲属等人收受巨额财物；道德败坏。
+
+
+</div>
+
+
+
+</body>
+</html>

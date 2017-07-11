@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#border{
+		position: relative;
+		left:20px;
+		width : 200px;
+		height: 200px;
+		background-color:red; 
+	}
+	#move{
+		width: 5px;
+		background-color:black;
+		height: 200px;
+		float: right;
+        cursor: w-resize;
+	}
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+	    var move = document.getElementById('move');
+	    var border = document.getElementById('border');
+	    var l = 0;
+	    var t = 0;
+	    var is_move = false;//判断是否点击到move，点击到则可以拖动
+		document.onmousemove = function(e){
+			// 获得事件对象
+			var ev = window.event || e;
+			// 获得鼠标的位置
+			l = ev.clientX;
+			t = ev.clientY;
+				// console.info(is_move);
+			// alert();
+			if (!is_move) {
+				return ;
+				// console.info(l);
+			};
+			// 将位置设置给红旗
+			border.style.width = (l-20)+'px';
+			// hongqi.style.top = t+'px';
+            
+		}
+		move.onmousedown = function(){
+			// var width = 300;
+			// console.info(l);
+	        is_move = true;
+		}
+		document.onmouseup = function(){
+	        is_move = false;
+		}
+    }
+</script>
+</head>
+
+<body>
+
+<div id='border'>
+    <div id='move'></div>
+</div>
+</body>
+</html>

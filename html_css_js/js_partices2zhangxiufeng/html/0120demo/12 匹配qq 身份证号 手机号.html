@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+
+
+	// 匹配qq 
+	// var reg = /^[1-9]\d{4,10}$/;
+
+	// 匹配手机号
+	// 正则防君子不防小人
+	// var reg = /^1(31|32|33|52|80|86|88|70)\d{8}$/;
+
+	// 身份证号
+	var reg = /^\d{17}[\dx]$/i;
+	var str = '654003198904194574';
+
+	// 用正则去匹配字符串
+	var re = reg.test(str);
+		
+	if(re){
+		document.write('匹配成功！O(∩_∩)O');
+	}else{
+		document.write('匹配失败！%>_<%');
+	}
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

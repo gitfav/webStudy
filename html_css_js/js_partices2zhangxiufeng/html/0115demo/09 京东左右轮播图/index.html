@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#jd{
+		width: 473px;
+		height: 180px;
+		border: 3px solid blue;
+		margin: 100px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#jd .in{
+		width: 1892px;
+		height: 180px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: green;
+		/*border: 1px solid red;*/
+	}
+	#jd .in img{
+		float: left;
+	}
+	#jd ul{
+		position: absolute;
+		top: 169px;
+		left: 161px;
+	}
+	#jd ul li{
+		width: 36px;
+		height: 5px;
+		float: left;
+		margin-right: 2px;
+		background: #999999;
+		list-style: none;
+	}
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../jquery.easing.1.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 给li加移入事件
+		$('#jd ul li').mouseover(function(){
+			// 获得移入的li的序号
+			var c = $(this).index();
+			// 计算大div的left值
+			var l = c*-473;
+			// 让大div移动过来
+			$('#jd .in').animate({'left':l+'px'}, 1000,'easeOutBounce');
+			// 让移入的li变绿
+			$(this).css('background', '#7ABD55').siblings('li').css('background', '#999999');
+		})
+
+	})
+</script>
+</head>
+
+<body>
+
+<div id="jd">
+	<div class="in">
+		<img src="images/1.jpg" alt="" />
+		<img src="images/2.jpg" alt="" />
+		<img src="images/3.jpg" alt="" />
+		<img src="images/4.jpg" alt="" />
+		
+	</div>
+	<ul>
+		<li style="background:#7ABD55;"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+</body>
+</html>

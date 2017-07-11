@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var a=[100];
+		for(var i=0;i<100;i++){
+			a[i]=i+1;
+		}
+		var num;
+		var b=[];
+		for(var j=0;j<5;j++){
+			 num=Math.floor(Math.random()*100);
+			 b.push(a[num]);		 
+		}
+		document.getElementById("divs").innerHTML=b;
+	}
+</script>
+
+</head>
+
+<body>
+<div id="divs"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+// 用构造函数创建对象
+	function ren(){
+		this.name = '婴儿';
+		this.sex = '性别';
+		this.height = '身高';
+		this.weight = '体重';
+		this.speak = function(){
+			alert('会说话');
+		}
+		this.eat = function(){
+			alert('会吃饭');
+		}
+	}
+
+	// 通过ren这个构造函数创建出一个具体的对象
+	// 实例化对象
+	var xiawa = new ren();
+	// alert(xiawa.sex);
+	xiawa.name = '夏娃';
+	xiawa.dance = function(){
+		alert('会跳舞');
+	}
+	// alert(xiawa.name);
+
+	var yadang = new ren();
+	yadang.name = '亚当';
+	yadang.sex = '男';
+	yadang.tattoo = '蓝精灵';
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

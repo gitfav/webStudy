@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	
+window.onload = function(){
+	
+	// 抓能用到的元素
+	var btn = document.getElementById('btn');
+	var dog = document.getElementById('dog');
+	var speed = 1;
+	// 给btn加单击事件
+	btn.onclick = function(){
+		setInterval(function(){
+			speed++;
+			// 获得旧的left
+			var old_left = parseInt(dog.style.left);
+			// 计算新的left值
+			var new_left = old_left+speed;
+			document.title = new_left;
+			// 将新值赋值回去
+			dog.style.left = new_left+'px';
+		},20)
+	}
+
+}
+
+</script>
+</head>
+
+<body>
+
+	<input type="button" value="点我啊！" id="btn" />
+
+	<br /><br />
+
+	<img src="dog.jpg" style="width:200px;position:absolute;left:0px;top:50px;" id="dog" />
+
+
+</body>
+</html>
