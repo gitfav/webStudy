@@ -10,6 +10,9 @@
    git merge upstream/dev
 4、推送到线上
    git push
+5、修改上游地址
+   git remote set-url upstream URL
+
 
 $ git push  upstream dev:dev
 本地直接推送到上游
