@@ -1,0 +1,45 @@
+	git log //查看 版本日志
+git log --pretty=oneline //查看 版本日志（只显示一行）
+git reflog //记录每一次命令
+
+git reset --hard HEAD^ //回退上一个版本
+git reset --hard HEAD^^^ //回退到之前某个版本
+git reset --hard 02951e7bd86ea0402661073a1ebeda3c45e12d73  //回退到这个版本号。
+git reset HEAD <file> //把暂存区的文件给移除，
+git reset HEAD . //把暂存区的所有文件给移除
+
+git add . //修改的全部放入暂存区
+git add readme.txt  //readme.tx放入暂存区
+git commit -m"改了什么？" //把暂存区的所有内容提交到当前分支
+
+git checkout -- ret.txt //把工作区的文件修改撤销，如果ret.txt在暂存区有，就撤销到和暂存的状态。如果没有就回到和版本库一摸一样的状态
+git checkout . //把工作区的全部文件修改撤销
+
+git checkout -b dev //创建一个dev分支，然后切换到dev分支。相当于下面2条命令。
+git branch dev //创建分支
+git checkout dev //切换到dev分支
+git branch //查看所有分支
+git merge <name> //合并某分支到当前分支
+git branch -d dev //删除分支
+git branch -D dev //强行删除分支
+
+git rm <file>//移除工作区的某个文件 ,如果误删没提交，就用git checkout . 恢复。
+
+
+git remote add origin git@server-name:path/repo-name.git //关联一个远程库
+git remote //查看远程库
+git remote -v //查看远程库，并显示更详细信息
+git push -u origin master // 第一次推送master分支的所有内容
+git push origin master //此后，每次本地提交后，只要有必要，就可以使用这个命令推送最新修改
+
+Bug分支
+
+git stash //隐藏当前工作区，现在工作区就是干净的
+git stash list /查看被隐藏的工作区
+git stash apply //恢复隐藏的工作区，但stash的内容并不删除
+git stash drop //删除stash内容
+git stash stash pop //恢复工作区，并且同时吧stash内容也删了。
+恢复工作区是会如果有冲突需要手动合并。  stash 用途之一就是和线上的冲突无法pull，可以先隐藏工作区 pull 线上代码，然后恢复再合并 或者 临时修改个bug
+
+标签
+git 
