@@ -23,6 +23,7 @@ git branch //查看所有分支
 git merge <name> //合并某分支到当前分支
 git branch -d dev //删除分支
 git branch -D dev //强行删除分支
+git branch -a 查看远程仓库的所有分支
 
 git rm <file>//移除工作区的某个文件 ,如果误删没提交，就用git checkout . 恢复。
 
@@ -41,6 +42,8 @@ git stash apply //恢复隐藏的工作区，但stash的内容并不删除
 git stash drop //删除stash内容
 git stash stash pop //恢复工作区，并且同时吧stash内容也删了。
 恢复工作区是会如果有冲突需要手动合并。  stash 用途之一就是和线上的冲突无法pull，可以先隐藏工作区 pull 线上代码，然后恢复再合并 或者 临时修改个bug
+
+git fetch upstream //获取远程仓库的所有信息
 
 标签
 git 
