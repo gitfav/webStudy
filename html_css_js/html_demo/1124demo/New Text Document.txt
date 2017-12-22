@@ -1,6 +1,0 @@
-1G = 1024M  兆
-源文件  10M
-jpg 1M
-png 2M
-gif 100K
-bmp 8-9M 矢量图

@@ -1,3 +1,0 @@
-overflow:hidden;
-相对定位
-float 浮动

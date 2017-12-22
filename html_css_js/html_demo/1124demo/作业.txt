@@ -1,3 +1,0 @@
-1、写一个简历页面
-
-3、http://reg.jiayuan.com/signup/fillbasic.php?bd=5410&sex=m&year=1990&month=11&day=1101&province=11&degree=30&marriage=1&height=170&degree=30
